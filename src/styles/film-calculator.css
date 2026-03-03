@@ -1,0 +1,317 @@
+
+.section-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  width: 100%;
+  text-align: center;
+}
+
+.calculator-card {
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: .8rem auto;
+}
+ .film-options .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: .7rem 0;
+  }
+.calculator-header {
+  background-color: #007bff;
+  padding: 1.5rem;
+  text-align: center;
+}
+.calculator-header h5 {
+    color: #f8f9fa;
+    font-size: 1.5rem ;
+}
+.calculator-header p {
+    color: #f8f9fa;
+    font-size: 1rem ;
+}
+
+.calculator-body {
+  padding: 2rem;
+  
+}
+
+.block-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.film-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.film-option:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.film-option input {
+  display: none;
+}
+
+.film-option .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.film-option div {
+  flex-grow: 1;
+}
+
+.film-option strong {
+  display: block;
+}
+
+.film-option small {
+  color: #6c757d;
+}
+
+.film-option .checked-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #007bff;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.film-option.active .checked-icon {
+  display: block;
+}
+
+.feature-box {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.feature-box ul li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: pre-line; /* Preserve line breaks in description */
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.price {
+  text-align: center;
+}
+
+.price span {
+  display: block;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.price p,
+.price strong {
+  font-size: 1.5rem;
+}
+
+.price small {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.price.offer .badge {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.window-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .7rem 0;
+}
+.window-input table input {
+  max-width: 100px;
+}
+.table {
+    width: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .table tbody td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        .row-no {
+            font-weight: bold;
+            color: #6c757d;
+        }
+
+        .form-control {
+            text-align: center;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 8px;
+            max-width: 120px;
+            margin: 0 auto;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+        }
+
+        .text-primary {
+            color: #007bff !important;
+        }
+
+        /* Style for add more button (if added via JS) */
+        .add-window {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .add-window:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for remove buttons (if added via JS) */
+        .remove-row {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+
+        .remove-row:hover {
+            background-color: #bb2d3b;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .table {
+                font-size: 0.9rem;
+            }
+
+            .form-control {
+                max-width: 100%;
+            }
+        }
+.btn-add-window {
+  background-color: #e9ecef;
+  color: #007bff;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-estimate {
+    inset: 0;
+    outline: none;
+    border: none;
+    margin: .7rem auto;
+    text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.price-summary .summary-box {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.price-summary .label,
+.price-summary .sub-label {
+  font-weight: bold;
+}
+
+.price-summary hr {
+  margin: 0.5rem 0;
+}
+
+.btn-call {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calculator-card {
+    margin:  1rem auto;
+    width: 100%;
+  }
+  .window-input {
+    flex-direction: column;
+  }
+
+  .price-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .film-options .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
