@@ -7,7 +7,7 @@ import slides from "./Hero-Sliders"
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="hero-section">
+    <section className="hero-section">
       <Carousel
         autoPlay
         interval={5000} // 5 seconds per slide
@@ -33,7 +33,7 @@ const HeroSection = () => {
             <div className="slide-content">
               <h1>{slide.title}</h1>
               <p>{slide.description}</p>
-              <a href={slide.buttonLink} className="btn">
+              <a target={slide.buttonText === "Get Your Quote" && "_blank"} href={slide.buttonLink} className="btn">
                 {slide.buttonText}
               </a>
             </div>

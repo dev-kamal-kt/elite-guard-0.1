@@ -32,7 +32,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div className="project-card">
-          <img src="https://images.unsplash.com/photo-1497366811357-25c233602d0b?auto=format&fit=crop&w=800&q=80" alt="Office window tinting project in Abu Dhabi - commercial building with glare-reducing film" className="project-image"/>
+          <img src="/projects-imgs/project-4.jpeg" alt="Office window tinting project in Abu Dhabi - commercial building with glare-reducing film" className="project-image"/>
           <div className="project-content">
             <h3 className="project-title">Office Window Tinting</h3>
             <p className="project-desc">Applied commercial-grade film to office windows, reducing glare on screens, improving energy efficiency, and enhancing professional privacy.</p>
@@ -40,10 +40,34 @@ const ProjectSection = () => {
           </div>
         </div>
         <div className="project-card">
-          <img src="https://images.unsplash.com/photo-1560448205-4d9b3e6f8c3c?auto=format&fit=crop&w=800&q=80" alt="Apartment window tinting project in Dubai - high-rise apartment with privacy and UV protection film" className="project-image"/>
+          <img src="/projects-imgs/project-5.jpeg" alt="Apartment window tinting project in Dubai - high-rise apartment with privacy and UV protection film" className="project-image"/>
           <div className="project-content">
             <h3 className="project-title">Apartment Window Tinting</h3>
             <p className="project-desc">Upgraded high-rise apartment windows with one-way privacy film for better views, UV protection, and cooler interiors without dark rooms.</p>
+            <a href="before-after.html#apartment" className="project-btn">View Details</a>
+          </div>
+        </div>
+        <div className="project-card">
+          <img src="/projects-imgs/project-6.jpeg" alt="Apartment window tinting project in Dubai - high-rise apartment with privacy and UV protection film" className="project-image"/>
+          <div className="project-content">
+            <h3 className="project-title">Kitchen PPF (Paint Protection Film)</h3>
+            <p className="project-desc">Shield your premium marble and quartz from stains, scratches, and heat without changing their natural beauty.</p>
+            <a href="before-after.html#apartment" className="project-btn">View Details</a>
+          </div>
+        </div>
+        <div className="project-card">
+          <img src="/projects-imgs/project-7.jpeg" alt="Apartment window tinting project in Dubai - high-rise apartment with privacy and UV protection film" className="project-image"/>
+          <div className="project-content">
+            <h3 className="project-title">Doorstep Premium Tinting – Elite Heat & UV Shield</h3>
+            <p className="project-desc">Get world-class window tinting without leaving home. Maximum heat rejection + 99% UV protection, flawless bubble-free finish, installed by professionals.</p>
+            <a href="before-after.html#apartment" className="project-btn">View Details</a>
+          </div>
+        </div>
+        <div className="project-card">
+          <img src="/projects-imgs/project-8.jpeg" alt="Apartment window tinting project in Dubai - high-rise apartment with privacy and UV protection film" className="project-image"/>
+          <div className="project-content">
+            <h3 className="project-title">Commercial & Office Window Tinting </h3>
+            <p className="project-desc">We handle everything from consultation to flawless, bubble-free installation — backed by 14+ years of expertise. Upgrade your workspace efficiently and cost-effectively.</p>
             <a href="before-after.html#apartment" className="project-btn">View Details</a>
           </div>
         </div>

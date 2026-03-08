@@ -5,7 +5,7 @@ const ServiceSection = () => {
   return (
     <>
       <h2 className="section-title">Our Latest Services</h2>
-      <section className="services-grid container">
+      <section id="service-section" className="services-grid container">
         <div className="service-card">
           <div
             className="card-image"

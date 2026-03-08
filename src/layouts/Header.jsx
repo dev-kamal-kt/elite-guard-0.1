@@ -1,15 +1,23 @@
 import React, { useState, useRef, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navRef = useRef(null);
+  const qtrRef = useRef(null)
   const [scrollCount, setScrollCount] = useState(0);
+  const navigate = useNavigate()
+
+
   const openMenu = () => {
     navRef.current.classList.toggle("active");
   };
+const getQote = ()=>{
+  qtrRef.current.click()
+    //navigate("https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for%20window%20tinting...")
+}
+
 useEffect(() => {
   const handleScroll = () => {
-    console.log("Scrolling...");
     setScrollCount(prev => prev + 1);
   };
   window.addEventListener('scroll', handleScroll);
@@ -31,7 +39,7 @@ useEffect(() => {
         </div>
         <ul ref={navRef} className="nav-links">
           <li>
-            <NavLink to="#hero" data-translate="nav_home">
+            <NavLink to="/" data-translate="nav_home">
               Home
             </NavLink>
           </li>
@@ -96,11 +104,13 @@ useEffect(() => {
             <NavLink to="#contact" data-translate="nav_contact">
               Contact
             </NavLink>
-            <button className="qute-btn">Get Free Quote</button>
+            <button onClick={getQote} className="qute-btn">Get Free Quote</button>
           </li>
         </ul>
         <NavLink
-          to="#contact"
+        ref={qtrRef}
+          to="https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for%20window%20tinting..."
+          target="_blank"
           className="glow-button"
           data-translate="nav_contact"
         >
