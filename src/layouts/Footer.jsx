@@ -1,6 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import { MdAddIcCall } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -12,17 +15,17 @@ const Footer = () => {
         <ul className="footer-contact-list">
           <li>
             <NavLink to="tel:+971564911220" className="footer-link">
-              <span className="icon">📞</span> +971 56 491 1220
+              <span className="icon"><MdAddIcCall size={25}/></span> +971 56 491 1220
             </NavLink>
           </li>
           <li>
             <NavLink to="tel:+971523323919" className="footer-link">
-              <span className="icon">📞</span> +971 52 332 3919
+              <span className="icon"><MdAddIcCall size={25}/></span> +971 52 332 3919
             </NavLink>
           </li>
           <li>
             <NavLink to="mailto:eliteguardcarcare@gmail.com" className="footer-link">
-              <span className="icon">✉️</span> eliteguardcarcare@gmail.com
+              <span className="icon"><MdOutlineEmail size={25}/></span> eliteguardcarcare@gmail.com
             </NavLink>
           </li>
         </ul>

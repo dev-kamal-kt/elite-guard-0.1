@@ -5,7 +5,7 @@ const ProjectSection = () => {
   return (
    <section id="projects">
     <div className="container">
-      <h2>Featured Transformations</h2>
+      <h2 className='section-title'>Featured Transformations</h2>
       <div className="projects-grid">
         <div className="project-card">
           <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80" alt="Car window tinting project in Dubai - before and after view of luxury SUV with privacy film" className="project-image"/>

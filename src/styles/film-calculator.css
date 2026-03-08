@@ -1,4 +1,3 @@
-
 .section-title {
   font-size: 1.7rem;
   font-weight: bold;
@@ -18,30 +17,29 @@
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: .8rem auto;
+  margin: 0.8rem auto;
 }
- .film-options .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin: .7rem 0;
-  }
+.film-options .col-md-6 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0.7rem 0;
+}
 .calculator-header {
   background-color: #007bff;
   padding: 1.5rem;
   text-align: center;
 }
 .calculator-header h5 {
-    color: #f8f9fa;
-    font-size: 1.5rem ;
+  color: #f8f9fa;
+  font-size: 1.5rem;
 }
 .calculator-header p {
-    color: #f8f9fa;
-    font-size: 1rem ;
+  color: #f8f9fa;
+  font-size: 1rem;
 }
 
 .calculator-body {
   padding: 2rem;
-  
 }
 
 .block-title {
@@ -126,6 +124,7 @@
   background-color: #f8f9fa;
   padding: 1rem;
   border-radius: 10px;
+  margin: 1.5rem auto ;
 }
 
 .price {
@@ -156,102 +155,160 @@
   border-radius: 20px;
   margin-bottom: 0.5rem;
 }
-
-.window-input {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: .7rem 0;
-}
-.window-input table input {
-  max-width: 100px;
-}
-.table {
-    width: 80%;
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Basic table styling */
+        table {
+            width: 85%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
         }
 
-        .table thead th {
-            background-color: #f8f9fa;
-            color: #333;
-            font-weight: bold;
-            text-align: center;
-            padding: 12px;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .table tbody td {
-            text-align: center;
-            vertical-align: middle;
-            padding: 10px;
-        }
-
-        .row-no {
-            font-weight: bold;
-            color: #6c757d;
-        }
-
-        .form-control {
-            text-align: center;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
+        th, td {
+            border: 1px solid #ddd;
             padding: 8px;
-            max-width: 120px;
-            margin: 0 auto;
+            text-align: left;
         }
 
-        .form-control:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
-        }
-
-        .text-primary {
-            color: #007bff !important;
-        }
-
-        /* Style for add more button (if added via JS) */
-        .add-window {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
+        th {
+            background-color: #f2f2f2;
             font-weight: bold;
-            margin-top: 10px;
         }
 
-        .add-window:hover {
-            background-color: #0056b3;
-        }
-
-        /* Style for remove buttons (if added via JS) */
-        .remove-row {
-            background-color: #dc3545;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-        }
-
-        .remove-row:hover {
-            background-color: #bb2d3b;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .table {
-                font-size: 0.9rem;
+        /* Responsive design for mobile */
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
             }
 
-            .form-control {
-                max-width: 100%;
+            thead {
+                display: none; /* Hide header on mobile */
+            }
+
+            tr {
+                margin-bottom: 10px;
+                display: block;
+                border: 1px solid #ddd;
+            }
+
+            td {
+                display: block;
+                text-align: right;
+                font-size: 14px;
+                border-bottom: 1px dotted #ccc;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            td:last-child {
+                border-bottom: 0;
+            }
+
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
             }
         }
+.window-input {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7rem 0;
+}
+#msg {
+  width: 85%;
+  margin: .5rem auto;
+  padding: .6rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+}
+ .error {
+  border: 1px solid #e60101;
+  background: #ff606033;
+  color: #ff0000;
+  font-weight: 600;
+}
+.btn-danger {
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background: #ff0000;
+  font-weight: 600;
+  padding: .3rem;
+
+}
+.row-no {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.form-control {
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+/* Style for add more button (if added via JS) */
+.add-window {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding:.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.add-window:hover {
+  background-color: #0056b3;
+}
+
+/* Style for remove buttons (if added via JS) */
+.remove-row {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.remove-row:hover {
+  background-color: #bb2d3b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-control {
+    max-width: 100%;
+  }
+}
+ #msg {
+  width: 100%;
+}
+.btn-danger { 
+  margin-left: 1.7rem;
+}
 .btn-add-window {
   background-color: #e9ecef;
   color: #007bff;
@@ -260,25 +317,46 @@
 }
 
 .btn-estimate {
-    inset: 0;
-    outline: none;
-    border: none;
-    margin: .7rem auto;
-    text-align: center;
+  inset: 0;
+  outline: none;
+  border: none;
+  margin: 0.5rem auto;
+  text-align: center;
   background-color: #007bff;
   color: #fff;
   font-weight: bold;
+  font-size: 15px;
 }
 
 .price-summary .summary-box {
   background-color: #f8f9fa;
   padding: 1rem;
   border-radius: 10px;
+  margin: 1rem auto;
+}
+.price-summary .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .price-summary .label,
 .price-summary .sub-label {
   font-weight: bold;
+  margin: 1rem .5rem;
+}
+.price-summary .value, .price-summary .sub-value {
+  color: #049338;
+  font-weight: 700;
+}
+.total-label{
+  font-weight: bold;
+  margin: 1rem .5rem;
+}
+.total-value {
+  color: #049338;
+  font-weight: 700;
 }
 
 .price-summary hr {
@@ -298,12 +376,33 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .calculator-card {
-    margin:  1rem auto;
+    margin: 1rem auto;
     width: 100%;
   }
   .window-input {
     flex-direction: column;
   }
+   .price-summary {
+    width: 100%;
+    padding: 0;
+    margin: .5rem auto;
+   }
+  .price-summary .summary-box { 
+     width: 100%;
+     margin: .6rem auto;
+     font-size: 12px;
+  }
+  .price-summary .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+ .price-summary .row button { 
+ width: 100px;
+ margin: .5rem auto;
+ }
 
   .price-box {
     flex-direction: column;
