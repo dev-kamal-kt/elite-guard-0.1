@@ -223,6 +223,60 @@ box-shadow: 0 0 25px r#f8a813, 0 0 35px #f8a813;
        margin: 1rem auto;
       } 
 
+      .pop-area {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 79, 101, 0.255);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        overflow-y: hidden;
+      }
+      .pop-area .msg-box {
+        width: 340px;
+        padding: 1.3rem .7rem;
+        margin: .6rem auto;
+        border: 1px solid #1774d174;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 8px;
+      }.msg-box .close-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 11;
+        cursor: pointer;
+      }
+      .msg-box #msg {
+        width: 85%;
+  margin: .5rem auto;
+  padding: .6rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+      }
+      .msg-box .error {
+  border: 1px solid #e60101;
+  background: #ff606033;
+  color: #ff0000;
+  font-weight: 600;
+}
+ .msg-box .success {
+  border: 1px solid #0bd318;
+  background: #02b40e2e;
+  color: #00bc22;
+  font-weight: 600;
+}
 /* Responsive Navbar */
 @media (max-width: 992px) {
   .nav-links {
@@ -430,6 +484,13 @@ h2 {
 @media (max-width: 768px) {
   #quote form {
     grid-template-columns: 1fr;
+  }
+  .pop-area {
+    overflow: hidden;
+    height: 100%;
+  }
+  .pop-area .msg-box {
+        width: 300px; 
   }
 }
 /* Process Steps */

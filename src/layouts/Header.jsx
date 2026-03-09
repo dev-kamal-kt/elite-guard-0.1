@@ -101,7 +101,7 @@ useEffect(() => {
             </NavLink>
           </li> */}
           <li className="flex-row">
-            <NavLink to="#contact" data-translate="nav_contact">
+            <NavLink to="/contact-us" data-translate="nav_contact">
               Contact
             </NavLink>
             <button onClick={getQote} className="qute-btn">Get Free Quote</button>

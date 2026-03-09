@@ -654,8 +654,8 @@ const FilmCalculator = () => {
                       type="radio"
                       name="film"
                       value="2"
-                      checked={selectedPlan === "2"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
+                      checked={selectedPlan === "2"}onChange={(e) => setSelectedPlan(e.target.value)}
+                      
                     />
                     <span className="circle prestige">
                       <img
