@@ -9,15 +9,22 @@ const useContact = create((set, get) => ({
     try {
       set({ isContacting: true });
       const response = await axios.post("/mail/contact.php", data);
-      console.log(response.data);
-      set({
+      if(response?.data?.status){
+        set({
         messages: {
           type: true,
-          text: "Thanks for sending message",
+          text: response?.data?.message || "Thanks for sending message",
         },
       });
+      }else {
+        set({
+        messages: {
+          type: false,
+          text: response?.data?.message || "Failed to send message",
+        },
+      });
+      }
     } catch (error) {
-      console.log(error);
       set({
         messages: {
           type: false,

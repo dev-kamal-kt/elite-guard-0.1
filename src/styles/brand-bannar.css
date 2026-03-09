@@ -1,0 +1,78 @@
+.banner-container {
+      width: 100%;
+      max-width: 1450px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: rgba(22, 95, 2, 0.08); /* subtle green tint */
+      border-radius: 16px;
+      border: 1px solid rgba(22, 95, 2, 0.2);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .slider-track {
+      display: flex;
+      animation: slide 5s linear infinite;
+      will-change: transform;
+    }
+
+    .slidee {
+      flex: 0 0 auto;
+      width: 180px;           /* width of each logo box */
+      height: 110px;
+      margin: 20px 15px;
+      /* background: rgba(255,255,255,0.06); */
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .slidee img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      filter: brightness(1.1);
+      transition: transform 0.5s ease;
+    }
+
+    .slidee:hover {
+      transform: scale(1.08);
+      background: rgba(22, 95, 2, 0.18);
+      border-color: #165f02;
+      box-shadow: 0 0 20px rgba(22, 95, 2, 0.3);
+    }
+
+    .slidee:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Infinite loop animation */
+    @keyframes slide {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .slider-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Make it faster on smaller screens */
+    @media (max-width: 768px) {
+      .banner-container {
+        width: 90%;
+      }
+      .slidee {
+        width: 160px;
+        height: 110px;
+        margin: 15px 10px;
+      }
+      .slider-track {
+        animation-duration: 3s; /* faster on mobile */
+      }
+    }

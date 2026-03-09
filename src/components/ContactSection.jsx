@@ -1,18 +1,19 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
 import "../styles/contact-style.css";
 import { MdAddIcCall } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
-import useContact from "../store/useContact"
+import useContact from "../store/useContact";
 
 const ContactSection = () => {
   const msgRef = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [service,setService] = useState("")
   const [message, setMessage] = useState("");
-  const {contactNow} = useContact()
+  const { contactNow, isContacting } = useContact();
 
   const showMessage = (msg, isSuccess = false) => {
     const el = msgRef.current;
@@ -65,7 +66,7 @@ const ContactSection = () => {
   };
 
   const sendMessage = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     if (!validateForm()) {
       return;
@@ -75,10 +76,11 @@ const ContactSection = () => {
       name: name.trim(),
       email: email.trim(),
       phone: phone.trim(),
+      service,
       message: message.trim(),
       submittedAt: new Date().toISOString(),
     };
-    
+
     /*
     console.log("=== CONTACT FORM SUBMITTED ===");
     console.log("Name    :", formData.name);
@@ -92,7 +94,7 @@ const ContactSection = () => {
     // Here you would normally send data to backend
     // fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
 
-    contactNow(JSON.stringify(formData))
+    contactNow(JSON.stringify(formData));
 
     //showMessage("Thank you! Your message has been sent.", true);
 
@@ -142,7 +144,8 @@ const ContactSection = () => {
             <div className="method-content">
               <h3>Mobile Service Areas</h3>
               <p>
-                Dubai • Abu Dhabi • Al Ain<br />
+                Dubai • Abu Dhabi • Al Ain
+                <br />
                 We come to you
               </p>
             </div>
@@ -181,6 +184,18 @@ const ContactSection = () => {
               required
             />
 
+            <select onChange={(e)=>{setService(e.target.value)}}>
+              <option value="none">Select a service</option>
+              <option value="Window tinting">Window tinting</option>
+              <option value="Car tinting">Car tinting</option>
+              <option value="Privacy Window Tinting">
+                Privacy Window Tinting
+              </option>
+              <option value="Premium Window Tinting">
+                Premium Window Tinting
+              </option>
+            </select>
+
             <textarea
               placeholder="Tell us about your tinting needs..."
               rows="6"
@@ -191,8 +206,13 @@ const ContactSection = () => {
             />
 
             <div className="submit-wrapper">
-              <button type="submit" className="submit-btn">
-                Send Message
+              <button
+                type="submit"
+                className="submit-btn"
+                disabled={isContacting}
+                style={{ cursor: isContacting ? "not-allowed" : "pointer" }}
+              >
+                {isContacting ? "Please Wait..." : "Send Message"}
               </button>
             </div>
           </form>
