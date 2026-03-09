@@ -14,13 +14,8 @@ const Footer = () => {
         <h3 className="footer-title">Contact Us</h3>
         <ul className="footer-contact-list">
           <li>
-            <NavLink to="tel:+971564911220" className="footer-link">
-              <span className="icon"><MdAddIcCall size={25}/></span> +971 56 491 1220
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="tel:+971523323919" className="footer-link">
-              <span className="icon"><MdAddIcCall size={25}/></span> +971 52 332 3919
+            <NavLink to="tel:+971563990282" className="footer-link">
+              <span className="icon"><MdAddIcCall size={25}/></span> +971563990282
             </NavLink>
           </li>
           <li>

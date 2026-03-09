@@ -4,7 +4,9 @@ import "../styles/film-calculator.css";
 
 const FilmCalculator = () => {
   const [selectedPlan, setSelectedPlan] = useState("1");
-  const [windows, setWindows] = useState([{ id: Date.now(), height: "100", width: "100", qty: "1" }]);
+  const [windows, setWindows] = useState([
+    { id: Date.now(), height: "100", width: "100", qty: "1" },
+  ]);
   const [totalArea, setTotalArea] = useState(0);
   const [offerTotal, setOfferTotal] = useState(0);
   const [companyTotal, setCompanyTotal] = useState(0);
@@ -15,10 +17,11 @@ const FilmCalculator = () => {
     {
       id: "1",
       companyPrice: "350.00", // Original Price before discount
-      offerPrice: "175.00",   // 50% Discounted Price
+      offerPrice: "175.00", // 50% Discounted Price
       name: "Prestige",
       type: "Transparent",
-      description: "Best for natural light and high heat protection\nTransparent – allows natural light\n80% Heat Reduction\n99.99% UV Protection\n97% IR Rejection\nAvailable Colors: 30% & 50%",
+      description:
+        "Best for natural light and high heat protection\nTransparent – allows natural light\n80% Heat Reduction\n99.99% UV Protection\n97% IR Rejection\nAvailable Colors: 30% & 50%",
     },
     {
       id: "2",
@@ -26,7 +29,8 @@ const FilmCalculator = () => {
       offerPrice: "175.00",
       name: "Silver",
       type: "Reflective",
-      description: "Clear from inside, reflective mirror from outside\n76% Heat Reduction\n99% UV Protection\n92% IR Rejection\nColors Available: 30% & 70%",
+      description:
+        "Clear from inside, reflective mirror from outside\n76% Heat Reduction\n99% UV Protection\n92% IR Rejection\nColors Available: 30% & 70%",
     },
     {
       id: "3",
@@ -34,7 +38,8 @@ const FilmCalculator = () => {
       offerPrice: "175.00",
       name: "Dark",
       type: "Privacy",
-      description: "Clear from inside, dark from outside\n78% Heat Reduction\nColors Available: 30% / 50% / 70%",
+      description:
+        "Clear from inside, dark from outside\n78% Heat Reduction\nColors Available: 30% / 50% / 70%",
     },
     {
       id: "4",
@@ -42,7 +47,8 @@ const FilmCalculator = () => {
       offerPrice: "175.00",
       name: "Blackout",
       type: "100% Black",
-      description: "Full privacy from both sides\n85% Heat Reduction\n99% UV Protection\nCompletely blocks view from both sides",
+      description:
+        "Full privacy from both sides\n85% Heat Reduction\n99% UV Protection\nCompletely blocks view from both sides",
     },
     {
       id: "5",
@@ -50,7 +56,8 @@ const FilmCalculator = () => {
       offerPrice: "175.00",
       name: "Frosted",
       type: "Blur Privacy",
-      description: "Perfect for offices, partitions, and glass doors\nFull daytime privacy\nElegant and premium appearance",
+      description:
+        "Perfect for offices, partitions, and glass doors\nFull daytime privacy\nElegant and premium appearance",
     },
     {
       id: "6",
@@ -58,7 +65,8 @@ const FilmCalculator = () => {
       offerPrice: "175.00",
       name: "Colorful",
       type: "Decorative",
-      description: "Vibrant colors for decorative and heat purposes\nBlocks 99% of harmful UV rays\nHeat rejection 53-84%\nImprove comfort\nUnique aesthetic appeal",
+      description:
+        "Vibrant colors for decorative and heat purposes\nBlocks 99% of harmful UV rays\nHeat rejection 53-84%\nImprove comfort\nUnique aesthetic appeal",
     },
     {
       id: "7",
@@ -66,7 +74,8 @@ const FilmCalculator = () => {
       offerPrice: "175.00",
       name: "Not Sure?",
       type: "We will help you choose",
-      description: "Unsure which film is right for you?\nWe will bring samples to your location\nFree professional consultation\nExact measurements on site\nCustomized quotation",
+      description:
+        "Unsure which film is right for you?\nWe will bring samples to your location\nFree professional consultation\nExact measurements on site\nCustomized quotation",
     },
   ];
 
@@ -112,8 +121,11 @@ const FilmCalculator = () => {
       // Logic: (H/100 * W/100) convert cm to meters, then multiply by Qty
       const area = windows.reduce(
         (sum, w) =>
-          sum + (parseFloat(w.height) / 100) * (parseFloat(w.width) / 100) * parseInt(w.qty),
-        0
+          sum +
+          (parseFloat(w.height) / 100) *
+            (parseFloat(w.width) / 100) *
+            parseInt(w.qty),
+        0,
       );
 
       const offerPriceNum = parseFloat(selectedFilm.offerPrice);
@@ -127,7 +139,10 @@ const FilmCalculator = () => {
   };
 
   const addWindow = () => {
-    setWindows([...windows, { id: Date.now(), height: "", width: "", qty: "1" }]);
+    setWindows([
+      ...windows,
+      { id: Date.now(), height: "", width: "", qty: "1" },
+    ]);
   };
 
   const removeWindow = (id) => {
@@ -160,7 +175,9 @@ const FilmCalculator = () => {
               <div className="row g-3 film-options">
                 {films.map((film) => (
                   <div className="col-md-6" key={film.id}>
-                    <label className={`film-option ${selectedPlan === film.id ? "active" : ""}`}>
+                    <label
+                      className={`film-option ${selectedPlan === film.id ? "active" : ""}`}
+                    >
                       <input
                         type="radio"
                         name="film"
@@ -170,10 +187,17 @@ const FilmCalculator = () => {
                       />
                       <span className="circle">
                         <img
-                          src={`/window-films/${film.name.toLowerCase().replace("?", "unknown")}.png`} 
+                          src={`/window-films/${film.name.toLowerCase().replace("?", "unknown")}.png`}
                           alt={film.name}
-                          style={{ width: "28px", height: "28px", objectFit: "cover", borderRadius: "50%" }}
-                          onError={(e) => (e.target.src = "https://via.placeholder.com/28")}
+                          style={{
+                            width: "28px",
+                            height: "28px",
+                            objectFit: "cover",
+                            borderRadius: "50%",
+                          }}
+                          onError={(e) =>
+                            (e.target.src = "https://via.placeholder.com/28")
+                          }
                         />
                       </span>
                       <div>
@@ -189,11 +213,14 @@ const FilmCalculator = () => {
               </div>
 
               <div className="feature-box mt-4">
-                <h6>{selectedFilm.name} ({selectedFilm.type})</h6>
+                <h6>
+                  {selectedFilm.name} ({selectedFilm.type})
+                </h6>
                 <ul className="list-unstyled mt-3">
                   {selectedFilm.description.split("\n").map((line, i) => (
                     <li key={i}>
-                      <i className="fa-solid fa-check text-success me-2"></i>{line}
+                      <i className="fa-solid fa-check text-success me-2"></i>
+                      {line}
                     </li>
                   ))}
                 </ul>
@@ -206,8 +233,12 @@ const FilmCalculator = () => {
                   <thead>
                     <tr>
                       <th>No.</th>
-                      <th>Height <span className="text-primary">(cm)</span></th>
-                      <th>Width <span className="text-primary">(cm)</span></th>
+                      <th>
+                        Height <span className="text-primary">(cm)</span>
+                      </th>
+                      <th>
+                        Width <span className="text-primary">(cm)</span>
+                      </th>
                       <th>Qty</th>
                       <th></th>
                     </tr>
@@ -222,7 +253,9 @@ const FilmCalculator = () => {
                             className="form-control"
                             value={win.height}
                             placeholder="cm"
-                            onChange={(e) => handleInputChange(index, "height", e.target.value)}
+                            onChange={(e) =>
+                              handleInputChange(index, "height", e.target.value)
+                            }
                           />
                         </td>
                         <td>
@@ -231,7 +264,9 @@ const FilmCalculator = () => {
                             className="form-control"
                             value={win.width}
                             placeholder="cm"
-                            onChange={(e) => handleInputChange(index, "width", e.target.value)}
+                            onChange={(e) =>
+                              handleInputChange(index, "width", e.target.value)
+                            }
                           />
                         </td>
                         <td>
@@ -239,7 +274,9 @@ const FilmCalculator = () => {
                             type="number"
                             className="form-control"
                             value={win.qty}
-                            onChange={(e) => handleInputChange(index, "qty", e.target.value)}
+                            onChange={(e) =>
+                              handleInputChange(index, "qty", e.target.value)
+                            }
                           />
                         </td>
                         <td>
@@ -249,7 +286,7 @@ const FilmCalculator = () => {
                               onClick={() => removeWindow(win.id)}
                               className="btn btn-danger btn-sm"
                             >
-                              <RiDeleteBin6Line size={20}/>
+                              <RiDeleteBin6Line size={20} />
                             </button>
                           )}
                         </td>
@@ -257,14 +294,23 @@ const FilmCalculator = () => {
                     ))}
                   </tbody>
                 </table>
-                <button onClick={addWindow} type="button" className="btn add-window mt-0 w-100">
+              </div>
+              <div className="btn-area">
+                <button
+                  onClick={addWindow}
+                  type="button"
+                  className="btn add-window mt-0 w-100"
+                >
                   + Add More
                 </button>
+                <button
+                  onClick={getEstimate}
+                  type="button"
+                  className="btn btn-estimate mt-4 w-100"
+                >
+                  Get Estimation →
+                </button>
               </div>
-
-              <button onClick={getEstimate} type="button" className="btn btn-estimate mt-4 w-100">
-                Get Estimation →
-              </button>
             </form>
 
             {showSummary && (
@@ -283,15 +329,26 @@ const FilmCalculator = () => {
                   <hr />
                   <div className="d-flex justify-content-between total-row">
                     <span className="total-label">Offer Price (50% OFF)</span>
-                    <span className="total-value">{offerTotal.toFixed(2)} AED</span>
+                    <span className="total-value">
+                      {offerTotal.toFixed(2)} AED
+                    </span>
                   </div>
                 </div>
-                <div className="row g-3 mt-3">
+                <div id="price-btns" className="row g-3 mt-3">
                   <div className="col-6">
-                    <a href="tel:+971564911220" className="btn btn-call w-100">Call Now</a>
+                    <a href="tel:+971564911220" className="btn btn-call w-100">
+                      Call Now
+                    </a>
                   </div>
                   <div className="col-6">
-                    <a href="https://wa.me/971564911220" target="_blank" rel="noreferrer" className="btn btn-whatsapp w-100">WhatsApp</a>
+                    <a
+                      href="https://wa.me/971564911220"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-whatsapp w-100"
+                    >
+                      WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>
