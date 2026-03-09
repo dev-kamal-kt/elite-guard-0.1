@@ -4,7 +4,7 @@ import "../styles/film-calculator.css";
 
 const FilmCalculator = () => {
   const [selectedPlan, setSelectedPlan] = useState("1");
-  const [windows, setWindows] = useState([{ id: 1, height: "150", width: "200", qty: "1" }]);
+  const [windows, setWindows] = useState([{ id: Date.now(), height: "100", width: "100", qty: "1" }]);
   const [totalArea, setTotalArea] = useState(0);
   const [offerTotal, setOfferTotal] = useState(0);
   const [companyTotal, setCompanyTotal] = useState(0);
@@ -14,15 +14,15 @@ const FilmCalculator = () => {
   const films = [
     {
       id: "1",
-      companyPrice: "435.00",
-      offerPrice: "175.00",
+      companyPrice: "350.00", // Original Price before discount
+      offerPrice: "175.00",   // 50% Discounted Price
       name: "Prestige",
       type: "Transparent",
       description: "Best for natural light and high heat protection\nTransparent – allows natural light\n80% Heat Reduction\n99.99% UV Protection\n97% IR Rejection\nAvailable Colors: 30% & 50%",
     },
     {
       id: "2",
-      companyPrice: "435.00",
+      companyPrice: "350.00",
       offerPrice: "175.00",
       name: "Silver",
       type: "Reflective",
@@ -30,7 +30,7 @@ const FilmCalculator = () => {
     },
     {
       id: "3",
-      companyPrice: "435.00",
+      companyPrice: "350.00",
       offerPrice: "175.00",
       name: "Dark",
       type: "Privacy",
@@ -38,7 +38,7 @@ const FilmCalculator = () => {
     },
     {
       id: "4",
-      companyPrice: "435.00",
+      companyPrice: "350.00",
       offerPrice: "175.00",
       name: "Blackout",
       type: "100% Black",
@@ -46,7 +46,7 @@ const FilmCalculator = () => {
     },
     {
       id: "5",
-      companyPrice: "435.00",
+      companyPrice: "350.00",
       offerPrice: "175.00",
       name: "Frosted",
       type: "Blur Privacy",
@@ -54,7 +54,7 @@ const FilmCalculator = () => {
     },
     {
       id: "6",
-      companyPrice: "435.00",
+      companyPrice: "350.00",
       offerPrice: "175.00",
       name: "Colorful",
       type: "Decorative",
@@ -62,7 +62,7 @@ const FilmCalculator = () => {
     },
     {
       id: "7",
-      companyPrice: "435.00",
+      companyPrice: "350.00",
       offerPrice: "175.00",
       name: "Not Sure?",
       type: "We will help you choose",
@@ -72,17 +72,15 @@ const FilmCalculator = () => {
 
   const selectedFilm = films.find((f) => f.id === selectedPlan) || films[0];
 
-  const showMessage = (msg, type) => {
-    if (type) {
-      msgRef.current.classList.add("success");
-      msgRef.current.textContent = msg;
-    } else {
-      msgRef.current.classList.add("error");
-      msgRef.current.textContent = msg;
-    }
+  const showMessage = (msg, isSuccess) => {
+    if (!msgRef.current) return;
+    msgRef.current.className = isSuccess ? "success" : "error";
+    msgRef.current.textContent = msg;
     setTimeout(() => {
-      msgRef.current.removeAttribute("class");
-      msgRef.current.textContent = "";
+      if (msgRef.current) {
+        msgRef.current.className = "";
+        msgRef.current.textContent = "";
+      }
     }, 2500);
   };
 
@@ -111,29 +109,35 @@ const FilmCalculator = () => {
 
   const getEstimate = () => {
     if (checkValidation()) {
+      // Logic: (H/100 * W/100) convert cm to meters, then multiply by Qty
       const area = windows.reduce(
         (sum, w) =>
           sum + (parseFloat(w.height) / 100) * (parseFloat(w.width) / 100) * parseInt(w.qty),
         0
       );
+
       const offerPriceNum = parseFloat(selectedFilm.offerPrice);
       const companyPriceNum = parseFloat(selectedFilm.companyPrice);
-      const offerTot = area * offerPriceNum;
-      const companyTot = area * companyPriceNum;
+
       setTotalArea(area);
-      setOfferTotal(offerTot);
-      setCompanyTotal(companyTot);
+      setOfferTotal(area * offerPriceNum);
+      setCompanyTotal(area * companyPriceNum);
       setShowSummary(true);
     }
   };
 
   const addWindow = () => {
-    const newId = windows.length + 1;
-    setWindows([...windows, { id: newId, height: "", width: "", qty: "1" }]);
+    setWindows([...windows, { id: Date.now(), height: "", width: "", qty: "1" }]);
   };
 
   const removeWindow = (id) => {
     setWindows(windows.filter((w) => w.id !== id));
+  };
+
+  const handleInputChange = (index, field, value) => {
+    const newWindows = [...windows];
+    newWindows[index][field] = value;
+    setWindows(newWindows);
   };
 
   return (
@@ -143,7 +147,7 @@ const FilmCalculator = () => {
         <p className="section-subtitle text-center">
           Tell us your window size — we’ll calculate price instantly
           <br />
-          🇺🇸 USA | 🇩🇪 Germany | 🇬🇧 UK
+          🇦🇪 UAE | Dubai | Abu Dhabi
         </p>
         <div className="calculator-card mx-auto">
           <div className="calculator-header">
@@ -151,379 +155,101 @@ const FilmCalculator = () => {
             <p className="text-white">Premium Window Film Calculation</p>
           </div>
           <div className="calculator-body text-start">
-            <form action="" method="post">
+            <form onSubmit={(e) => e.preventDefault()}>
               <h6 className="block-title">Select Film Type</h6>
               <div className="row g-3 film-options">
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "1" ? "active" : ""}`}
-                    data-film-id="1"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Prestige"
-                    data-type="Transparent"
-                    data-description="Best for natural light and high heat protection\nTransparent – allows natural light\n80% Heat Reduction\n99.99% UV Protection\n97% IR Rejection\nAvailable Colors: 30% &amp; 50%"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="1"
-                      checked={selectedPlan === "1"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/prestige-1769275542-5756.png"
-                        alt="Prestige Window Film"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
+                {films.map((film) => (
+                  <div className="col-md-6" key={film.id}>
+                    <label className={`film-option ${selectedPlan === film.id ? "active" : ""}`}>
+                      <input
+                        type="radio"
+                        name="film"
+                        value={film.id}
+                        checked={selectedPlan === film.id}
+                        onChange={(e) => setSelectedPlan(e.target.value)}
                       />
-                    </span>
-                    <div>
-                      <strong>Prestige</strong>
-                      <small>Transparent</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "2" ? "active" : ""}`}
-                    data-film-id="2"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Silver"
-                    data-type="Reflective"
-                    data-description="Clear from inside, reflective mirror from outside\n76% Heat Reduction\n99% UV Protection\n92% IR Rejection\nColors Available: 30% &amp; 70%"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="2"
-                      checked={selectedPlan === "2"}onChange={(e) => setSelectedPlan(e.target.value)}
-                      
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/silver-1769275613-3043.png"
-                        alt="Silver Window Film"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
-                      />
-                    </span>
-                    <div>
-                      <strong>Silver</strong>
-                      <small>Reflective</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "3" ? "active" : ""}`}
-                    data-film-id="3"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Dark"
-                    data-type="Privacy"
-                    data-description="Clear from inside, dark from outside\n78% Heat Reduction\nColors Available: 30% / 50% / 70%"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="3"
-                      checked={selectedPlan === "3"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/dark-1769275680-6171.png"
-                        alt="Dark Window Film"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
-                      />
-                    </span>
-                    <div>
-                      <strong>Dark</strong>
-                      <small>Privacy</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "4" ? "active" : ""}`}
-                    data-film-id="4"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Blackout"
-                    data-type="100% Black"
-                    data-description="Full privacy from both sides\n85% Heat Reduction\n99% UV Protection\nCompletely blocks view from both sides"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="4"
-                      checked={selectedPlan === "4"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/blackout-1769275713-3933.png"
-                        alt="Blackout Window Film"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
-                      />
-                    </span>
-                    <div>
-                      <strong>Blackout</strong>
-                      <small>100% Black</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "5" ? "active" : ""}`}
-                    data-film-id="5"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Frosted"
-                    data-type="Blur Privacy"
-                    data-description="Perfect for offices, partitions, and glass doors\nFull daytime privacy\nElegant and premium appearance"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="5"
-                      checked={selectedPlan === "5"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/frosted-1769275746-1441.png"
-                        alt="Frosted Window Film"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
-                      />
-                    </span>
-                    <div>
-                      <strong>Frosted</strong>
-                      <small>Blur Privacy</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "6" ? "active" : ""}`}
-                    data-film-id="6"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Colorful"
-                    data-type="Decorative"
-                    data-description="Vibrant colors for decorative and heat purposes\nBlocks 99% of harmful UV rays\nHeat rejection 53-84%\nImprove comfort\nUnique aesthetic appeal"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="6"
-                      checked={selectedPlan === "6"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/colorful-1769275777-4157.png"
-                        alt="Colorful Window Film"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
-                      />
-                    </span>
-                    <div>
-                      <strong>Colorful</strong>
-                      <small>Decorative</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
-                <div className="col-md-6">
-                  <label
-                    className={`film-option ${selectedPlan === "7" ? "active" : ""}`}
-                    data-film-id="7"
-                    data-company-price="435.00"
-                    data-offer-price="175.00"
-                    data-name="Not Sure?"
-                    data-type="We will help you choose"
-                    data-description="Unsure which film is right for you?\nWe will bring samples to your location\nFree professional consultation\nExact measurements on site\nCustomized quotation"
-                  >
-                    <input
-                      type="radio"
-                      name="film"
-                      value="7"
-                      checked={selectedPlan === "7"}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    />
-                    <span className="circle prestige">
-                      <img
-                        src="/window-films/not-sure-1769275808-5901.png"
-                        alt="Not Sure Window Film Option"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          objectFit: "cover",
-                          borderRadius: "50%",
-                        }}
-                      />
-                    </span>
-                    <div>
-                      <strong>Not Sure?</strong>
-                      <small>We will help you choose</small>
-                    </div>
-                    <span className="checked-icon">
-                      <i className="fa-solid fa-circle-check"></i>
-                    </span>
-                  </label>
-                </div>
+                      <span className="circle">
+                        <img
+                          src={`/window-films/${film.name.toLowerCase().replace("?", "unknown")}.png`} 
+                          alt={film.name}
+                          style={{ width: "28px", height: "28px", objectFit: "cover", borderRadius: "50%" }}
+                          onError={(e) => (e.target.src = "https://via.placeholder.com/28")}
+                        />
+                      </span>
+                      <div>
+                        <strong>{film.name}</strong>
+                        <small>{film.type}</small>
+                      </div>
+                      <span className="checked-icon">
+                        <i className="fa-solid fa-circle-check"></i>
+                      </span>
+                    </label>
+                  </div>
+                ))}
               </div>
+
               <div className="feature-box mt-4">
-                <h6 id="feature-title">
-                  {selectedFilm.name} ({selectedFilm.type})
-                </h6>
-                <ul className="list-unstyled mt-3" id="feature-list">
+                <h6>{selectedFilm.name} ({selectedFilm.type})</h6>
+                <ul className="list-unstyled mt-3">
                   {selectedFilm.description.split("\n").map((line, i) => (
                     <li key={i}>
-                      <i className="fa-solid fa-check text-success me-2"></i>
-                      {line}
+                      <i className="fa-solid fa-check text-success me-2"></i>{line}
                     </li>
                   ))}
                 </ul>
               </div>
-              {/* <div className="price-box mt-4">
-                <div className="price company text-muted">
-                  <span>Company Price</span>
-                  <p
-                    className="text-muted text-decoration-line-through opacity-75 fw-semibold mb-0"
-                    id="companyPriceValue"
-                  >
-                    {selectedFilm.companyPrice}
-                  </p>
-                  <small>AED/m²</small>
-                </div>
-                <div className="price offer">
-                  <span className="badge">Best Deal</span>
-                  <span>Offer Price</span>
-                  <strong id="offerPriceValue">{selectedFilm.offerPrice}</strong>
-                  <small>AED/m²</small>
-                </div>
-              </div> */}
+
               <p ref={msgRef} id="msg"></p>
+
               <div className="window-input mt-4">
                 <table className="table table-borderless align-middle">
                   <thead>
                     <tr>
                       <th>No.</th>
-                      <th>
-                        Height <span className="text-primary">(cm)</span>
-                      </th>
-                      <th>
-                        Width <span className="text-primary">(cm)</span>
-                      </th>
+                      <th>Height <span className="text-primary">(cm)</span></th>
+                      <th>Width <span className="text-primary">(cm)</span></th>
                       <th>Qty</th>
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody id="windowTableBody">
+                  <tbody>
                     {windows.map((win, index) => (
                       <tr key={win.id}>
-                        <td className="row-no" data-label="No.">
-                          #{win.id}
-                        </td>
-                        <td data-label="Height (cm)">
+                        <td className="row-no">#{index + 1}</td>
+                        <td>
                           <input
                             type="number"
                             className="form-control"
                             value={win.height}
-                            placeholder="00"
-                            min="1"
-                            onChange={(e) => {
-                              const newWindows = [...windows];
-                              newWindows[index].height = e.target.value;
-                              setWindows(newWindows);
-                            }}
+                            placeholder="cm"
+                            onChange={(e) => handleInputChange(index, "height", e.target.value)}
                           />
                         </td>
-                        <td data-label="Width (cm)">
+                        <td>
                           <input
                             type="number"
                             className="form-control"
                             value={win.width}
-                            placeholder="00"
-                            min="1"
-                            onChange={(e) => {
-                              const newWindows = [...windows];
-                              newWindows[index].width = e.target.value;
-                              setWindows(newWindows);
-                            }}
+                            placeholder="cm"
+                            onChange={(e) => handleInputChange(index, "width", e.target.value)}
                           />
                         </td>
-                        <td data-label="Qty">
+                        <td>
                           <input
                             type="number"
                             className="form-control"
                             value={win.qty}
-                            placeholder="00"
-                            min="1"
-                            onChange={(e) => {
-                              const newWindows = [...windows];
-                              newWindows[index].qty = e.target.value;
-                              setWindows(newWindows);
-                            }}
+                            onChange={(e) => handleInputChange(index, "qty", e.target.value)}
                           />
                         </td>
-                        <td width="8%">
+                        <td>
                           {windows.length > 1 && (
                             <button
                               type="button"
                               onClick={() => removeWindow(win.id)}
                               className="btn btn-danger btn-sm"
                             >
-                              <RiDeleteBin6Line size={25}/>
+                              <RiDeleteBin6Line size={20}/>
                             </button>
                           )}
                         </td>
@@ -535,61 +261,41 @@ const FilmCalculator = () => {
                   + Add More
                 </button>
               </div>
-              <button
-                onClick={getEstimate}
-                type="button"
-                className="btn btn-estimate mt-4 w-100"
-                id="getCostEstimationBtn"
-              >
+
+              <button onClick={getEstimate} type="button" className="btn btn-estimate mt-4 w-100">
                 Get Estimation →
               </button>
             </form>
-            <div
-              className="price-summary mt-4"
-              id="estimationResults"
-              style={{ display: showSummary ? "block" : "none" }}
-            >
-              <div className="summary-box">
-                <div className="d-flex justify-content-between align-items-center mb-2">
-                  <span className="label">Total Area  -- </span>
-                  <span className="value" id="totalAreaValue">
-                    {totalArea.toFixed(2)} m²
-                  </span>
+
+            {showSummary && (
+              <div className="price-summary mt-4">
+                <div className="summary-box">
+                  <div className="d-flex justify-content-between mb-2">
+                    <span className="label">Total Area</span>
+                    <span className="value">{totalArea.toFixed(2)} m²</span>
+                  </div>
+                  <div className="d-flex justify-content-between mb-3">
+                    <span className="sub-label">Regular Price</span>
+                    <span className="sub-value text-decoration-line-through">
+                      {companyTotal.toFixed(2)} AED
+                    </span>
+                  </div>
+                  <hr />
+                  <div className="d-flex justify-content-between total-row">
+                    <span className="total-label">Offer Price (50% OFF)</span>
+                    <span className="total-value">{offerTotal.toFixed(2)} AED</span>
+                  </div>
                 </div>
-                <div className="d-flex justify-content-between align-items-center mb-3">
-                  <span className="sub-label">Regular Price  -- </span>
-                  <span
-                    className="sub-value text-decoration-line-through"
-                    id="regularTotalValue"
-                  >
-                    {companyTotal.toFixed(2)} AED
-                  </span>
-                </div>
-                <hr />
-                <div className="d-flex justify-content-between align-items-center total-row">
-                  <span className="total-label">Total Price</span>
-                  <span className="total-value" id="offerTotalValue">
-                    {offerTotal.toFixed(2)} AED
-                  </span>
-                </div>
-              </div>
-              <div className="row g-3 mt-3">
-                <div className="col-md-6">
-                  <a href="tel:+971564911220" className="btn btn-call w-100">
-                    <i className="fa-solid fa-phone me-2"></i> Call Now
-                  </a>
-                </div>
-                <div className="col-md-6">
-                  <a
-                    href="https://wa.me/971564911220"
-                    target="_blank"
-                    className="btn btn-whatsapp w-100"
-                  >
-                    <i className="fa-brands fa-whatsapp me-2"></i> WhatsApp
-                  </a>
+                <div className="row g-3 mt-3">
+                  <div className="col-6">
+                    <a href="tel:+971564911220" className="btn btn-call w-100">Call Now</a>
+                  </div>
+                  <div className="col-6">
+                    <a href="https://wa.me/971564911220" target="_blank" rel="noreferrer" className="btn btn-whatsapp w-100">WhatsApp</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
