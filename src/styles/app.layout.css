@@ -71,7 +71,7 @@ ul {
   background: #fff;
   color: #007bff;
   border: none;
-  padding: 5px 5px;
+  padding: 3px 5px;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
@@ -83,6 +83,7 @@ ul {
   position: relative;
    right: 0;
    top: 0;
+   background: #000;
 }
  #google_translate_element .goog-te-gadget-simple span, .VIpgJd-ZVi9od-ORHb-OEVmcd {
   display: none;
@@ -141,12 +142,13 @@ nav {
 .nav-links li a {
   color: #f8a813;
   padding: 10px 15px;
-  transition:
-    color 0.3s ease,
-    background 0.3s ease;
+  transition:color 0.3s ease, background 0.3s ease;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1rem;
+}
+.nav-links li .active-nav {
+   border-bottom: 2px solid #ffffff;
 }
 .nav-links li a:hover {
   color: #ffffff; /* Darker blue */
@@ -359,11 +361,11 @@ box-shadow: 0 0 25px r#f8a813, 0 0 35px #f8a813;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     rgba(0, 123, 255, 0.6),
     rgba(0, 123, 255, 0.4)
-  ); /* Blue overlay */
+  );  */
 }
 .slide-content {
   position: relative;
@@ -817,10 +819,10 @@ animation: glow-pulse .3s infinite alternate;
 }
 @media (max-width: 768px) {
   #hero {
-    height: 100vh;
+    height: 80vh;
   }
   .slide h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .slide p {
     font-size: 1rem;

@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate ,useLocation} from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation()
+    const [path,setPath] = useState("/")
   const navRef = useRef(null);
   const qtrRef = useRef(null)
   const [scrollCount, setScrollCount] = useState(0);
@@ -30,6 +32,11 @@ useEffect(() => {
   }
 }, [scrollCount]);
 
+useEffect(()=>{
+     setPath(location.pathname)
+     console.log(path)
+  },[location])
+
 
   return (
     <header>
@@ -39,12 +46,12 @@ useEffect(() => {
         </div>
         <ul ref={navRef} className="nav-links">
           <li>
-            <NavLink to="/" data-translate="nav_home">
+            <NavLink className={path === "/" ? "active-nav" : ""} to="/" data-translate="nav_home">
               Home
             </NavLink>
           </li>
           <li className="dropdown">
-            <NavLink to="#services" data-translate="nav_services">
+            <NavLink className={path === "/services" ? "active-nav" : ""} to="#services" data-translate="nav_services">
               Services
             </NavLink>
             <ul className="dropdown-content">
@@ -71,17 +78,17 @@ useEffect(() => {
             </ul>
           </li>
           <li>
-            <NavLink to="/process" data-translate="nav_process">
+            <NavLink className={path === "/process" ? "active-nav" : ""} to="/process" data-translate="nav_process">
               Process
             </NavLink>
           </li>
           <li>
-            <NavLink to="/why-us" data-translate="nav_why_us">
+            <NavLink className={path === "/why-us" ? "active-nav" : ""} to="/why-us" data-translate="nav_why_us">
               Why Us
             </NavLink>
           </li>
           <li>
-            <NavLink to="#projects" data-translate="nav_projects">
+            <NavLink className={path === "/projects" ? "active-nav" : ""} to="/projects" data-translate="nav_projects">
               Projects
             </NavLink>
           </li>
@@ -91,7 +98,7 @@ useEffect(() => {
             </NavLink>
           </li> */}
           <li className="flex-row">
-            <NavLink to="/contact-us" data-translate="nav_contact">
+            <NavLink className={path === "/contact-us" ? "active-nav" : ""} to="/contact-us" data-translate="nav_contact">
               Contact
             </NavLink>
             <button onClick={getQote} className="qute-btn">Get Free Quote</button>
@@ -120,3 +127,25 @@ useEffect(() => {
 };
 
 export default Header;
+
+
+
+
+
+/*
+Services
+Automotive Services
+__Car Window Tinting
+__Paint Protection Film (PPF)
+Residential Services
+__Home Window Tinting
+__Privacy Window Film
+__Kitchen Window Film
+__Surface Protection Film (Surface PPF)
+Commercial Services
+__Office Window Tinting
+__Building Glass Film
+__Security Window Film
+__Surface Protection Film
+
+*/

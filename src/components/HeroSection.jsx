@@ -10,7 +10,7 @@ const HeroSection = () => {
     <section className="hero-section">
       <Carousel
         autoPlay
-        interval={5000} // 5 seconds per slide
+        interval={3000} // 5 seconds per slide
         infiniteLoop
         showThumbs={false}
         showArrows={true}
