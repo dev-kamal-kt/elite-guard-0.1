@@ -118,7 +118,7 @@ const ContactSection = () => {
             <div className="method-content">
               <h3>Call or WhatsApp</h3>
               <p>
-                <a href="tel:+971564911220">+971563990282</a>
+                <a href="tel:+971564911220">+971564911220</a>
               </p>
             </div>
           </div>

@@ -232,7 +232,11 @@
   border-radius: 8px;
   margin: 1.8rem auto;
 }
-
+#price-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .price-summary .label {
   font-size: 1rem;
   font-weight: 600;
@@ -365,7 +369,18 @@
     font-size: 0.9rem;
     padding: 0.4rem;
   }
-
+#price-btns {
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+#price-btns .col-6 {
+    width: 100%;
+  }
+  #price-btns .col-6 a {
+    width: 100%;
+    text-align: center;
+  }
   .price-summary .summary-box {
     padding: 1.25rem;
   }

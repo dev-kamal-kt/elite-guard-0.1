@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { NavLink,Outlet } from 'react-router-dom'
+import { NavLink,Outlet,useLocation } from 'react-router-dom'
 import { BsWhatsapp } from "react-icons/bs";
 import { FiArrowUpCircle } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
@@ -11,6 +11,8 @@ import useContact from "../store/useContact"
 
 const Layouts = () => {
   const topRef = useRef(null);
+  const location = useLocation()
+  const [path,setPath] = useState("")
   const [showButton, setShowButton] = useState(false);
   const {messages,closePop} = useContact()
 
@@ -32,6 +34,11 @@ const Layouts = () => {
       topRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(()=>{
+     setPath(location.pathname)
+     scrollToTop()
+  },[location])
 
   return (
     <>

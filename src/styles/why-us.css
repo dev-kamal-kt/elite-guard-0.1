@@ -1,0 +1,179 @@
+  .why-container {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hero Section */
+        #why-hero {
+            background-image: url('/images/why-us-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 160px 20px;
+            position: relative;
+        }
+
+        #why-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #why-hero .why-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        #why-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #why-hero p {
+            font-size: 24px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .certicate {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem .5rem;
+            margin: 1.5rem 0;
+        }
+        .certicate .c-col {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .certicate .c-col img{
+            width: 90%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: .3s ease-in all;
+        }
+        .certicate .c-col img:hover {
+            transform: scale(1.05);
+        }
+        .certicate .c-col h3 {
+            color: #666;
+            font-size: 2rem;
+        }
+        .certicate .c-col p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: .5rem 1rem;
+        }
+
+        /* Why Us Section */
+        #why {
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        #why h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        #why .intro {
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .why-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .why-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: block;
+            color: #007bff;
+        }
+
+        .why-item h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .why-item p {
+            color: #666;
+        }
+
+        .why-cta {
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #why-hero {
+                padding: 100px 20px;
+            }
+
+            #why-hero h1 {
+                font-size: 36px;
+            }
+
+            #why-hero p {
+                font-size: 18px;
+            }
+            .certicate { 
+                flex-direction: column;
+            }
+            .certicate .c-col {
+                width: 100%;
+                margin: .8rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-container {
+                padding: 0 10px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+            }
+        }

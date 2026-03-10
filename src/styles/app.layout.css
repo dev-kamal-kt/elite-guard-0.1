@@ -75,7 +75,18 @@ ul {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.VIpgJd-ZVi9od-xl07Ob-lTBxed {
+  position: relative;
+   right: 0;
+   top: 0;
+}
+ #google_translate_element .goog-te-gadget-simple span, .VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none;
+} 
 @media (max-width: 768px) {
   #announcement-bar {
     padding: 3px 20px;

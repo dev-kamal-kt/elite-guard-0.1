@@ -71,28 +71,18 @@ useEffect(() => {
             </ul>
           </li>
           <li>
-            <NavLink to="#quote" data-translate="nav_quote">
-              Quote
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="#process" data-translate="nav_process">
+            <NavLink to="/process" data-translate="nav_process">
               Process
             </NavLink>
           </li>
           <li>
-            <NavLink to="#why" data-translate="nav_why_us">
+            <NavLink to="/why-us" data-translate="nav_why_us">
               Why Us
             </NavLink>
           </li>
           <li>
             <NavLink to="#projects" data-translate="nav_projects">
               Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="#faq" data-translate="nav_faq">
-              FAQ
             </NavLink>
           </li>
           {/* <li>
