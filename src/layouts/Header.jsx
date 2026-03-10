@@ -1,42 +1,41 @@
 import React, { useState, useRef, useEffect } from "react";
-import { NavLink, useNavigate ,useLocation} from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import "../styles/drop-down.css";
 
 const Header = () => {
-  const location = useLocation()
-    const [path,setPath] = useState("/")
+  const location = useLocation();
+  const [path, setPath] = useState("/");
   const navRef = useRef(null);
-  const qtrRef = useRef(null)
+  const qtrRef = useRef(null);
   const [scrollCount, setScrollCount] = useState(0);
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   const openMenu = () => {
     navRef.current.classList.toggle("active");
   };
-const getQote = ()=>{
-  qtrRef.current.click()
+  const getQote = () => {
+    qtrRef.current.click();
     //navigate("https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for%20window%20tinting...")
-}
-
-useEffect(() => {
-  const handleScroll = () => {
-    setScrollCount(prev => prev + 1);
   };
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []); 
 
-useEffect(() => {
-  if (scrollCount > 0 && navRef.current) {
-    navRef.current.classList.remove("active");
-  }
-}, [scrollCount]);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollCount((prev) => prev + 1);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-useEffect(()=>{
-     setPath(location.pathname)
-     console.log(path)
-  },[location])
+  useEffect(() => {
+    if (scrollCount > 0 && navRef.current) {
+      navRef.current.classList.remove("active");
+    }
+  }, [scrollCount]);
 
+  useEffect(() => {
+    setPath(location.pathname);
+    console.log(path);
+  }, [location]);
 
   return (
     <header>
@@ -46,11 +45,110 @@ useEffect(()=>{
         </div>
         <ul ref={navRef} className="nav-links">
           <li>
-            <NavLink className={path === "/" ? "active-nav" : ""} to="/" data-translate="nav_home">
+            <NavLink
+              className={path === "/" ? "active-nav" : ""}
+              to="/"
+              data-translate="nav_home"
+            >
               Home
             </NavLink>
           </li>
-          <li className="dropdown">
+          <li className="nav-link">
+            <NavLink to="#">
+              Services
+              <i className="fas fa-caret-down"></i>
+            </NavLink>
+            <div className="dropdown">
+              <ul>
+                <li className="dropdown-link">
+                  <NavLink to="#">
+                    Automotive Services
+                    <i className="fas fa-caret-down"></i>
+                  </NavLink>
+                  <div className="dropdown second">
+                    <ul>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/fullstack-seo">
+                         Car Window Tinting
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/google-ads">
+                          Paint Protection Film
+                        </NavLink>
+                      </li>
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                {/* More Services */}
+                <li className="dropdown-link">
+                  <NavLink to="#">
+                    Residential Services
+                    <i className="fas fa-caret-down"></i>
+                  </NavLink>
+                  <div className="dropdown second">
+                    <ul>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/graphic-design">
+                          Home Window Tinting
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/video-production">
+                          Privacy Window Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/copywriting">
+                         Kitchen Window Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/logo-desgin">Surface Protection Film (Surface PPF)</NavLink>
+                      </li>
+                     
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                {/* More Services */}
+                <li className="dropdown-link">
+                  <NavLink to="#">
+                   Commercial Services
+                    <i className="fas fa-caret-down"></i>
+                  </NavLink>
+                  <div className="dropdown second">
+                    <ul>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/blog-writing">
+                         Office Window Tinting
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/sound-canvas">
+                         Building Glass Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/product-description">
+                         Security Window Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/content-strategy">
+                         Surface Protection Film
+                        </NavLink>
+                      </li>
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                <div className="arrow"></div>
+              </ul>
+            </div>
+          </li>
+          {/* <li className="dropdown">
             <NavLink className={path === "/services" ? "active-nav" : ""} to="#services" data-translate="nav_services">
               Services
             </NavLink>
@@ -76,19 +174,32 @@ useEffect(()=>{
                 </NavLink>
               </li>
             </ul>
-          </li>
+          </li> */}
+
           <li>
-            <NavLink className={path === "/process" ? "active-nav" : ""} to="/process" data-translate="nav_process">
+            <NavLink
+              className={path === "/process" ? "active-nav" : ""}
+              to="/process"
+              data-translate="nav_process"
+            >
               Process
             </NavLink>
           </li>
           <li>
-            <NavLink className={path === "/why-us" ? "active-nav" : ""} to="/why-us" data-translate="nav_why_us">
+            <NavLink
+              className={path === "/why-us" ? "active-nav" : ""}
+              to="/why-us"
+              data-translate="nav_why_us"
+            >
               Why Us
             </NavLink>
           </li>
           <li>
-            <NavLink className={path === "/projects" ? "active-nav" : ""} to="/projects" data-translate="nav_projects">
+            <NavLink
+              className={path === "/projects" ? "active-nav" : ""}
+              to="/projects"
+              data-translate="nav_projects"
+            >
               Projects
             </NavLink>
           </li>
@@ -98,14 +209,20 @@ useEffect(()=>{
             </NavLink>
           </li> */}
           <li className="flex-row">
-            <NavLink className={path === "/contact-us" ? "active-nav" : ""} to="/contact-us" data-translate="nav_contact">
+            <NavLink
+              className={path === "/contact-us" ? "active-nav" : ""}
+              to="/contact-us"
+              data-translate="nav_contact"
+            >
               Contact
             </NavLink>
-            <button onClick={getQote} className="qute-btn">Get Free Quote</button>
+            <button onClick={getQote} className="qute-btn">
+              Get Free Quote
+            </button>
           </li>
         </ul>
         <NavLink
-        ref={qtrRef}
+          ref={qtrRef}
           to="https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for%20window%20tinting..."
           target="_blank"
           className="glow-button"
@@ -113,10 +230,7 @@ useEffect(()=>{
         >
           Get Free Quote
         </NavLink>
-        <div
-          onClick={openMenu}
-          className="menu-toggle"
-        >
+        <div onClick={openMenu} className="menu-toggle">
           <span></span>
           <span></span>
           <span></span>
@@ -127,10 +241,6 @@ useEffect(()=>{
 };
 
 export default Header;
-
-
-
-
 
 /*
 Services

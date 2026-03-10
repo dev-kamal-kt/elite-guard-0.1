@@ -1,0 +1,158 @@
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: -0.5rem;
+    width: 12rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.dropdown ul {
+    top: 1rem;
+    width: 14rem;
+    position: relative;
+    background: #000;
+}
+
+.dropdown-link > a {
+    display: flex;
+    background-color: var(--clr-light);
+    color: var(--clr-dropdown);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.dropdown-link:hover > a {
+    background-color: var(--clr-dropdown);
+    color: var(--clr-light);
+}
+
+.dropdown-link:not(:nth-last-child(2)) {
+    border-bottom: 1px solid var(--clr-light);
+}
+
+.dropdown-link i {
+    transform: rotate(-90deg);
+}
+
+.arrow {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    background-color: var(--clr-light);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow {
+    background-color: var(--clr-dropdown);
+}
+
+.dropdown-link {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown.second {
+    top: 0;
+    left: 87%;
+    padding-left: 0.8rem;
+    cursor: pointer;
+    transform: translateX(10px);
+    z-index: 909009;
+    width: 100%;
+}
+
+.dropdown.second ul {
+    width: 14rem;
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 30px #cccccc; */
+}
+
+.dropdown.second .arrow {
+    top: 10px;
+    left: -5.5px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown {
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*---> Mobile Design <---*/
+@media screen and (max-width: 768px) {
+    /* 1. Reset the container positioning */
+    .nav-link, .dropdown-link {
+        position: relative;
+        width: 100%;
+    }
+
+    /* 2. Fix the "Empty Height" issue */
+    .dropdown {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        transform: none !important;
+        
+        /* The Secret Sauce: Collapse the height instead of just hiding it */
+        max-height: 0; 
+        overflow: hidden; 
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.4s ease, opacity 0.3s;
+    }
+
+    /* 3. Open the menu on Hover/Tap */
+    .nav-link:hover > .dropdown,
+    .dropdown-link:hover > .dropdown {
+        max-height: 1000px; /* Large enough to fit all sub-items */
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* 4. Sub-menu (Second Level) Indentation */
+    .dropdown.second {
+        left: 0 !important;
+        padding-left: 1.5rem !important; /* Indents Automotive/Residential sub-items */
+        background: #111; /* Darker background for depth */
+    }
+
+    .dropdown ul {
+        background: #000;
+        width: 100% !important;
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    /* 5. Clean up Desktop UI elements */
+    .arrow {
+        display: none !important; /* Arrows look messy on mobile stacks */
+    }
+
+    .dropdown-link i {
+        transform: rotate(0deg); /* Reset the side-pointing arrow from desktop */
+        margin-left: 10px;
+    }
+
+    /* 6. Adjust spacing for "Finger Taps" */
+    .dropdown-link > a {
+        width: 100%;
+        padding: 12px 5px !important;
+        font-size: 13px !important;
+        border-bottom: 1px solid #222;
+    }
+   
+}
