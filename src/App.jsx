@@ -17,16 +17,16 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Layouts />}>
-          <Route index path="" element={<Home />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/process" element={<Process />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/why-us" element={<WhyUs />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blog-view" element={<SingleBlogView />} />
-          <Route path="/services/:serviceName" element={<SingleService />} />
+          <Route index element={<Home />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="process" element={<Process />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="why-us" element={<WhyUs />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="blog-view" element={<SingleBlogView />} />
+          <Route path="services/:serviceName" element={<SingleService />} />
         </Route>
       </Routes>
     </Router>
