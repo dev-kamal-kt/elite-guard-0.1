@@ -40,13 +40,19 @@ const Header = () => {
   return (
     <header>
       <nav className="container">
-        <div onClick={()=>{navigate("/")}} className="logo" data-translate="logo">
-          <img src="./images/logo.png" alt="Elite Guard Logo" />
+        <div
+          onClick={() => {
+            navigate("/");
+          }}
+          className="logo"
+          data-translate="logo"
+        >
+          <img src="/images/logo.png" alt="Elite Guard Logo" />
         </div>
         <ul ref={navRef} className="nav-links">
           <li>
             <NavLink
-            onClick={openMenu}
+              onClick={openMenu}
               className={path === "/" ? "active-nav" : ""}
               to="/"
               data-translate="nav_home"
@@ -69,8 +75,11 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/services/Home Window Tinting">
-                         Car Window Tinting
+                        <NavLink
+                          onClick={openMenu}
+                          to="/services/Home Window Tinting"
+                        >
+                          Car Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
@@ -78,14 +87,14 @@ const Header = () => {
                           Paint Protection Film
                         </NavLink>
                       </li>
-                       <li className="dropdown-link">
+                      <li className="dropdown-link">
                         <NavLink onClick={openMenu} to="/service/google-ads">
-                         Windshield Protection Film
+                          Windshield Protection Film
                         </NavLink>
                       </li>
-                       <li className="dropdown-link">
+                      <li className="dropdown-link">
                         <NavLink onClick={openMenu} to="/service/google-ads">
-                       Headlight Protection Film
+                          Headlight Protection Film
                         </NavLink>
                       </li>
                       <div className="arrow"></div>
@@ -101,25 +110,35 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/services/Home Window Tinting">
+                        <NavLink
+                          onClick={openMenu}
+                          to="/services/Home Window Tinting"
+                        >
                           Home Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/video-production">
+                        <NavLink
+                          onClick={openMenu}
+                          to="/service/video-production"
+                        >
                           Privacy Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
                         <NavLink onClick={openMenu} to="/service/copywriting">
-                         Kitchen Window Film
+                          Kitchen Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/logo-desgin">UV Protection Film</NavLink>
+                        <NavLink onClick={openMenu} to="/service/logo-desgin">
+                          UV Protection Film
+                        </NavLink>
                       </li>
-                     <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/logo-desgin">Heat Reduction Film</NavLink>
+                      <li className="dropdown-link">
+                        <NavLink onClick={openMenu} to="/service/logo-desgin">
+                          Heat Reduction Film
+                        </NavLink>
                       </li>
                       <div className="arrow"></div>
                     </ul>
@@ -128,29 +147,83 @@ const Header = () => {
                 {/* More Services */}
                 <li className="dropdown-link">
                   <NavLink to="#">
-                   Commercial Services
+                    Commercial Services
                     <i className="fas fa-caret-down"></i>
                   </NavLink>
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
                         <NavLink onClick={openMenu} to="/service/blog-writing">
-                         Office Window Tinting
+                          Office Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
                         <NavLink onClick={openMenu} to="/service/sound-canvas">
-                         Building Glass Film
+                          Building Glass Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
                         <NavLink to="/service/product-description">
-                         Security Window Film
+                          Security Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/content-strategy">
-                         Surface Protection Film
+                        <NavLink
+                          onClick={openMenu}
+                          to="/service/content-strategy"
+                        >
+                          Anti-Glare Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink
+                          onClick={openMenu}
+                          to="/service/content-strategy"
+                        >
+                          Decorative Frosted Film
+                        </NavLink>
+                      </li>
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                {/* More Services */}
+                <li className="dropdown-link">
+                  <NavLink to="#">
+                    Surface Protection
+                    <i className="fas fa-caret-down"></i>
+                  </NavLink>
+                  <div className="dropdown second">
+                    <ul>
+                      <li className="dropdown-link">
+                        <NavLink onClick={openMenu} to="/service/blog-writing">
+                          Surface Paint Protection Film (PPF)
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink onClick={openMenu} to="/service/sound-canvas">
+                          Kitchen Cabinet Protection Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink to="/service/product-description">
+                          Marble Surface Protection Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink
+                          onClick={openMenu}
+                          to="/service/content-strategy"
+                        >
+                          Furniture Protection Film
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-link">
+                        <NavLink
+                          onClick={openMenu}
+                          to="/service/content-strategy"
+                        >
+                          Elevator Panel Protection Film
                         </NavLink>
                       </li>
                       <div className="arrow"></div>
@@ -171,7 +244,8 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={openMenu}
+            <NavLink
+              onClick={openMenu}
               className={path === "/why-us" ? "active-nav" : ""}
               to="/why-us"
               data-translate="nav_why_us"
@@ -180,7 +254,8 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={openMenu}
+            <NavLink
+              onClick={openMenu}
               className={path === "/projects" ? "active-nav" : ""}
               to="/projects"
               data-translate="nav_projects"
@@ -188,13 +263,19 @@ const Header = () => {
               Projects
             </NavLink>
           </li>
-           <li>
-            <NavLink onClick={openMenu} to="/blogs" className={path === "/blogs" ? "active-nav" : ""} data-translate="nav_contact">
+          <li>
+            <NavLink
+              onClick={openMenu}
+              to="/blogs"
+              className={path === "/blogs" ? "active-nav" : ""}
+              data-translate="nav_contact"
+            >
               Blogs
             </NavLink>
           </li>
           <li className="flex-row">
-            <NavLink onClick={openMenu}
+            <NavLink
+              onClick={openMenu}
               className={path === "/contact-us" ? "active-nav" : ""}
               to="/contact-us"
               data-translate="nav_contact"

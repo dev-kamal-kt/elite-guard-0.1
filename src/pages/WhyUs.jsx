@@ -30,8 +30,8 @@ const WhyUs = () => {
             <div className="why-grid">
                 <div className="why-item">
                     <span className="why-icon">🏆</span>
-                    <h3>3M Certified Installers</h3>
-                    <p>Our team undergoes rigorous training and certification from 3M, guaranteeing precise and professional installations that meet the highest industry standards.</p>
+                    <h3> Nano Care Certified Installers</h3>
+                    <p> Our team undergoes rigorous training and certification from Nano Care, guaranteeing precise and professional installations that meet the highest industry standards.</p>
                 </div>
                 <div className="why-item">
                     <span className="why-icon">✅</span>

@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { NavLink,Outlet,useLocation } from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BsWhatsapp } from "react-icons/bs";
 import { FiArrowUpCircle } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
@@ -39,6 +41,14 @@ const Layouts = () => {
      setPath(location.pathname)
      scrollToTop()
   },[location])
+
+  useEffect(() => {
+    AOS.init({
+      // Global settings:
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      once: false,    // whether animation should happen only once - while scrolling down
+    });
+  }, []);
 
   return (
     <>

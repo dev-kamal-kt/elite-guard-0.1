@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/single-service.css";
+import SingleServiceLeft from "./SingleServiceLeft"
 
 const SingleService = () => {
   return (
@@ -28,7 +29,7 @@ const SingleService = () => {
                             {/* LEFT COLUMN: IMAGE & TEXT */}
                             <div className="col-50">
                               {/* Image */}
-                              <div className="ct-image-single">
+                              <div data-aos="zoom-in-up" className="ct-image-single">
                                 <img
                                   fetchPriority="high"
                                   decoding="async"
@@ -40,7 +41,7 @@ const SingleService = () => {
                               </div>
 
                               {/* Intro Text */}
-                              <div className="ct-text-editor">
+                              <div data-aos="zoom-in-up" className="ct-text-editor">
                                 <div className="ct-text-inner">
                                   <h3>
                                     Window Tinting Dubai – Comfort, Style &
@@ -59,11 +60,11 @@ const SingleService = () => {
                               </div>
 
                               {/* Benefits List */}
-                              <div className="ct-text-editor">
-                                <div className="ct-text-inner">
+                              <div  className="ct-text-editor">
+                                <div  className="ct-text-inner">
                                   <h2>Why Window Tinting Matters</h2>
                                   <ul>
-                                    <li>
+                                    <li data-aos="zoom-in-up">
                                       <strong>Heat Reduction</strong>
                                       <p
                                         style={{
@@ -77,7 +78,7 @@ const SingleService = () => {
                                         on air conditioning.
                                       </p>
                                     </li>
-                                    <li>
+                                    <li data-aos="zoom-in-up">
                                       <strong>UV Protection</strong>
                                       <p
                                         style={{
@@ -91,7 +92,7 @@ const SingleService = () => {
                                         upholstery from fading.
                                       </p>
                                     </li>
-                                    <li>
+                                    <li data-aos="zoom-in-up">
                                       <strong>Glare Control</strong>
                                       <p
                                         style={{
@@ -105,7 +106,7 @@ const SingleService = () => {
                                         for safer journeys.
                                       </p>
                                     </li>
-                                    <li>
+                                    <li data-aos="zoom-in-up">
                                       <strong>Privacy & Security</strong>
                                       <p
                                         style={{
@@ -119,7 +120,7 @@ const SingleService = () => {
                                         while adding a layer of protection.
                                       </p>
                                     </li>
-                                    <li>
+                                    <li data-aos="zoom-in-up">
                                       <strong>Energy Efficiency</strong>
                                       <p
                                         style={{
@@ -133,7 +134,7 @@ const SingleService = () => {
                                         indoor temperatures.
                                       </p>
                                     </li>
-                                    <li>
+                                    <li data-aos="zoom-in-up">
                                       <strong>Aesthetic Appeal</strong>
                                       <p
                                         style={{
@@ -153,113 +154,8 @@ const SingleService = () => {
                             </div>
 
                             {/* RIGHT COLUMN: CTA & CONTACT */}
-                            <div className="col-50">
-                              {/* Get Service Box */}
-                              <div className="ct-fancy-box ct-fancy-box-layout1">
-                                <div className="item--inner">
-                                  <div className="item--meta">
-                                    <h4 className="item--title">Get Service</h4>
-                                    <div className="item--description">
-                                      With quality parts to meet every budget
-                                      and friendly staff trained to make your
-                                      visit informative and hassle free.
-                                    </div>
-                                    <div className="item--link">
-                                      <a
-                                        className="btn btn-style2"
-                                        href="#contact-form"
-                                      >
-                                        Get Service
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* Contact Info: Phone */}
-                              <div className="ct-contact-info">
-                                <div className="ct-contact-content">
-                                  <label className="ct-contact-title">
-                                    Contact Us
-                                  </label>
-                                  <div className="ct-contact-list">
-                                    <a
-                                      href="tel:+971564911220"
-                                      aria-label="Call us at +971564911220"
-                                    >
-                                      <i
-                                        className="fas fa-phone-alt"
-                                        aria-hidden="true"
-                                      ></i>
-                                      <span>+971564911220</span>
-                                    </a>
-                                  </div>
-                                  <div className="ct-contact-list">
-                                    <a
-                                      href="mailto:eliteguardcarcare@gmail.com"
-                                      aria-label="Email us at eliteguardcarcare@gmail.com"
-                                    >
-                                      <i
-                                        className="fas fa-envelope"
-                                        aria-hidden="true"
-                                      ></i>
-                                      <span>eliteguardcarcare@gmail.com</span>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* Contact Info: Address */}
-                              <div className="ct-contact-info">
-                                <div className="ct-contact-content">
-                                  <label className="ct-contact-title">
-                                    Address
-                                  </label>
-                                  <div className="ct-contact-list">
-                                    <a
-                                      href="https://www.google.com/maps/place/24%C2%B058'07.5%22N+55%C2%B011'31.5%22E/@24.9687415,55.1894963,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.9687415!4d55.1920712?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      aria-label="View our location on Google Maps"
-                                    >
-                                      <i
-                                        className="fas fa-map-marker-alt"
-                                        aria-hidden="true"
-                                      ></i>
-                                      <span>
-                                       DIP 2, Dubai - Street 30 - Dubai Investment Park Second - Dubai
-                                      </span>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* Open Hours Box */}
-                              <div className="ct-fancy-box ct-fancy-box-layout2">
-                                <div className="item--inner">
-                                  <div className="item--meta">
-                                    <h4 className="item--title">Open Hours</h4>
-                                    {[
-                                      { day: "Monday", hours: "8 am - 8 pm" },
-                                      { day: "Tuesday", hours: "8 am - 8 pm" },
-                                      {
-                                        day: "Wednesday",
-                                        hours: "8 am - 8 pm",
-                                      },
-                                      { day: "Thursday", hours: "8 am - 8 pm" },
-                                      { day: "Friday", hours: "8 am - 8 pm" },
-                                      { day: "Saturday", hours: "9 am - 7 pm" },
-                                      { day: "Sunday", hours: "9 am - 7 pm" },
-                                    ].map((item, index) => (
-                                      <div key={index} className="item--list">
-                                        <span>{item.day}</span>
-                                        <span>{item.hours}</span>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            <SingleServiceLeft/>
+                            
                           </div>
                         </div>
                       </section>

@@ -29,7 +29,7 @@ const Blogs = () => {
                     </div>
                 </div>
                 <div className="blog-card">
-                    <img src="https://images.unsplash.com/photo-1617814088426-5e2c3c3c3c3c?auto=format&fit=crop&w=800&q=80" 
+                    <img src="/blog-images/blog-0.png" 
                          alt="Luxury car detailing process" className="blog-image"/>
                     <div className="blog-content">
                         <h3 className="blog-title">How Often Should You Detail Your Luxury Car in the UAE?</h3>
