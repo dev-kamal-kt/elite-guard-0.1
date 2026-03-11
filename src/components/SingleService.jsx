@@ -217,7 +217,7 @@ const SingleService = () => {
                                   </label>
                                   <div className="ct-contact-list">
                                     <a
-                                      href="https://goo.gl/maps/SoeREmHVPFsejPtV9"
+                                      href="https://www.google.com/maps/place/24%C2%B058'07.5%22N+55%C2%B011'31.5%22E/@24.9687415,55.1894963,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.9687415!4d55.1920712?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       aria-label="View our location on Google Maps"
@@ -227,7 +227,7 @@ const SingleService = () => {
                                         aria-hidden="true"
                                       ></i>
                                       <span>
-                                        Floor 17, Iris Bay, Business Bay, Dubai
+                                       DIP 2, Dubai - Street 30 - Dubai Investment Park Second - Dubai
                                       </span>
                                     </a>
                                   </div>

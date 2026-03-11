@@ -10,7 +10,6 @@
   --transition: all 0.3s ease;
 }
 
-
 .site-content {
     margin-top: 1.3rem;
 }
@@ -74,6 +73,7 @@ h4 {
 
 
 strong {
+  font-size: 20px;
   color: var(--dark-text);
   font-weight: 600;
 }
@@ -96,7 +96,7 @@ strong {
 .ct-text-inner {
   margin-bottom: 30px;
 }
-
+/*
 .ct-text-inner ul,
 .ct-text-inner ol {
   list-style: none;
@@ -121,7 +121,7 @@ strong {
   list-style-type: decimal;
   margin-left: 20px;
 }
-
+*/
 /* --- FANCY BOX (Service Card) --- */
 .ct-fancy-box {
   background: var(--white);
@@ -173,20 +173,20 @@ strong {
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  border: 2px solid var(--primary-blue);
+  /* border: 2px solid var(--primary-blue); */
   cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-blue);
-  border-color: var(--accent-blue);
+  /* border-color: var(--accent-blue); */
   color: var(--white);
   text-decoration: none;
 }
 
 .btn:focus {
-  outline: 2px solid var(--accent-blue);
+   /* outline: 2px solid var(--accent-blue);  */
   outline-offset: 2px;
 }
 
@@ -347,7 +347,7 @@ section {
 /* --- ACCESSIBILITY --- */
 a:focus,
 button:focus {
-  outline: 2px solid var(--accent-blue);
+  /* outline: 2px solid var(--accent-blue); */
   outline-offset: 2px;
 }
 

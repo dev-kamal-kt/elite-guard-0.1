@@ -221,7 +221,7 @@ const ContactSection = () => {
         <div>
           <div className="map-wrapper">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.851843!2d55.227488!3d25.075759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde1ccce38514413!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1732000000000"
+              src="https://www.google.com/maps/place/24%C2%B058'07.5%22N+55%C2%B011'31.5%22E/@24.9687415,55.1894963,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.9687415!4d55.1920712?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="100%"
               style={{ border: "0" }}
