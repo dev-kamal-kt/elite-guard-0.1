@@ -40,12 +40,13 @@ const Header = () => {
   return (
     <header>
       <nav className="container">
-        <div className="logo" data-translate="logo">
+        <div onClick={()=>{navigate("/")}} className="logo" data-translate="logo">
           <img src="./images/logo.png" alt="Elite Guard Logo" />
         </div>
         <ul ref={navRef} className="nav-links">
           <li>
             <NavLink
+            onClick={openMenu}
               className={path === "/" ? "active-nav" : ""}
               to="/"
               data-translate="nav_home"
@@ -68,12 +69,12 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink to="/service/fullstack-seo">
+                        <NavLink onClick={openMenu} to="/services/Home Window Tinting">
                          Car Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/google-ads">
+                        <NavLink onClick={openMenu} to="/service/google-ads">
                           Paint Protection Film
                         </NavLink>
                       </li>
@@ -90,22 +91,22 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink to="/service/graphic-design">
+                        <NavLink onClick={openMenu} to="/services/Home Window Tinting">
                           Home Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/video-production">
+                        <NavLink onClick={openMenu} to="/service/video-production">
                           Privacy Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/copywriting">
+                        <NavLink onClick={openMenu} to="/service/copywriting">
                          Kitchen Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/logo-desgin">Surface Protection Film (Surface PPF)</NavLink>
+                        <NavLink onClick={openMenu} to="/service/logo-desgin">Surface Protection Film (PPF)</NavLink>
                       </li>
                      
                       <div className="arrow"></div>
@@ -121,12 +122,12 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink to="/service/blog-writing">
+                        <NavLink onClick={openMenu} to="/service/blog-writing">
                          Office Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/sound-canvas">
+                        <NavLink onClick={openMenu} to="/service/sound-canvas">
                          Building Glass Film
                         </NavLink>
                       </li>
@@ -136,7 +137,7 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/content-strategy">
+                        <NavLink onClick={openMenu} to="/service/content-strategy">
                          Surface Protection Film
                         </NavLink>
                       </li>
@@ -148,34 +149,6 @@ const Header = () => {
               </ul>
             </div>
           </li>
-          {/* <li className="dropdown">
-            <NavLink className={path === "/services" ? "active-nav" : ""} to="#services" data-translate="nav_services">
-              Services
-            </NavLink>
-            <ul className="dropdown-content">
-              <li>
-                <NavLink to="#services" data-translate="nav_window_tinting">
-                  Window Tinting
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#services" data-translate="nav_car_wrapping">
-                  Car Wrapping
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#services" data-translate="nav_car_detailing">
-                  Car Detailing
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#services" data-translate="nav_protection_films">
-                  Protection Films
-                </NavLink>
-              </li>
-            </ul>
-          </li> */}
-
           <li>
             <NavLink
               className={path === "/process" ? "active-nav" : ""}
@@ -186,7 +159,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
+            <NavLink onClick={openMenu}
               className={path === "/why-us" ? "active-nav" : ""}
               to="/why-us"
               data-translate="nav_why_us"
@@ -195,7 +168,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
+            <NavLink onClick={openMenu}
               className={path === "/projects" ? "active-nav" : ""}
               to="/projects"
               data-translate="nav_projects"
@@ -203,13 +176,13 @@ const Header = () => {
               Projects
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink to="#contact" data-translate="nav_contact">
-              Contact
+           <li>
+            <NavLink onClick={openMenu} to="/blogs" className={path === "/blogs" ? "active-nav" : ""} data-translate="nav_contact">
+              Blogs
             </NavLink>
-          </li> */}
+          </li>
           <li className="flex-row">
-            <NavLink
+            <NavLink onClick={openMenu}
               className={path === "/contact-us" ? "active-nav" : ""}
               to="/contact-us"
               data-translate="nav_contact"

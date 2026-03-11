@@ -1,0 +1,364 @@
+:root {
+  --primary-blue: #007bff; /*Deep Professional Blue */
+  --accent-blue: #007bff; /* Brighter Blue for highlights */
+  --dark-text: #333333; /* Dark Grey for readability */
+  --light-text: #666666; /* Light Grey for descriptions */
+  --white: #ffffff;
+  --bg-light: #f4f7f6; /* Very light grey/blue tint */
+  --border-radius: 8px;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+
+.site-content {
+    margin-top: 1.3rem;
+}
+.content-inner {
+  padding: 5rem 0;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.col-12 {
+  grid-column: 1 / -1;
+}
+
+.col-50 {
+  grid-column: span 1;
+}
+
+/* --- TYPOGRAPHY --- */
+.site-content
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.site-content h1 {
+  font-size: 2.5rem;
+}
+
+.site-content h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  border-bottom: 2px solid var(--accent-blue);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.site-content h3 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.site-content h4 {
+  font-size: 1.3rem;
+}
+
+
+.site-content p {
+  color: var(--light-text);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+
+strong {
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+/* --- IMAGE STYLING --- */
+.ct-image-single img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: block;
+}
+
+.ct-image-single img:hover {
+  transform: scale(1.02);
+}
+
+/* --- TEXT EDITOR STYLING --- */
+.ct-text-inner {
+  margin-bottom: 30px;
+}
+
+.ct-text-inner ul,
+.ct-text-inner ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ct-text-inner li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.ct-text-inner ul li::before {
+  content: "•";
+  color: var(--accent-blue);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.ct-text-inner ol li {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+/* --- FANCY BOX (Service Card) --- */
+.ct-fancy-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--primary-blue);
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.ct-fancy-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.item--inner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item--title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--primary-blue);
+}
+
+.item--description {
+  font-size: 0.95rem;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+.item--link {
+  margin-top: 10px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border: 2px solid var(--primary-blue);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* --- CONTACT INFO --- */
+.ct-contact-info {
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.ct-contact-info:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ct-contact-title {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.ct-contact-list {
+  margin-bottom: 10px;
+}
+
+.ct-contact-list a {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.ct-contact-list a:hover,
+.ct-contact-list a:focus {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.ct-contact-list i {
+  color: var(--primary-blue);
+  width: 20px;
+}
+
+/* --- OPEN HOURS LIST --- */
+.item--list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  font-size: 0.9rem;
+}
+
+.item--list:last-child {
+  border-bottom: none;
+}
+
+.item--list span:first-child {
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.item--list span:last-child {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+/* --- SECTION SPACING --- */
+section {
+  margin-bottom: 40px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .site-content h1 {
+    font-size: 2rem;
+  }
+
+ .site-content h2 {
+    font-size: 1.5rem;
+  }
+
+ .site-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .site-content {
+    margin-top: 1.3rem;
+}
+.content-inner {
+  padding: 1rem 0;
+}
+
+ .site-content h1 {
+    font-size: 1.75rem;
+  }
+
+ .site-content h2 {
+    font-size: 1.3rem;
+  }
+
+ .site-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .item--list {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .item--list span:last-child {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+ .site-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .row {
+    gap: 20px;
+  }
+
+  .ct-fancy-box,
+  .ct-contact-info {
+    padding: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- ACCESSIBILITY --- */
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
