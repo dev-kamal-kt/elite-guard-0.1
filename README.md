@@ -212,6 +212,18 @@ Apache
 
 - Ensure the .htaccess and index.html files are visible in the root of public_html.
 
+---
+
+## ⚡ Demo & Screenshots
+
+<img src="ss-demo/s-1.jpg"/><br/>
+<img src="ss-demo/s-2.jpg"/><br/>
+<img src="ss-demo/s-3.jpg"/><br/>
+<img src="ss-demo/s-4.jpg"/><br/>
+<img src="ss-demo/s-5.jpg"/><br/>
+<img src="ss-demo/s-6.jpg"/><br/>
+<img src="ss-demo/s-7.jpg"/><br/>
+
 
 ---
 
@@ -219,10 +231,13 @@ Apache
 
 **Project Lead: Kamal Hussain**
 
-**Company: Elite Guard Auto Accessories Fitting L.L.C.**
+**Developer & Designer : <a href="https://ghsresume.netlify.app" target="_blank">Ghs Julian</a>**
+
+**Website: eliteguardcarcare.com**
 
 **Service Areas: Dubai & Abu Dhabi, UAE**
 
-**Website: eliteguardcarcare.com**
+**Company: Elite Guard Auto Accessories Fitting L.L.C.**
+
 
 ### Thank You !
