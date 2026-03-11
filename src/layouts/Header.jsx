@@ -78,6 +78,16 @@ const Header = () => {
                           Paint Protection Film
                         </NavLink>
                       </li>
+                       <li className="dropdown-link">
+                        <NavLink onClick={openMenu} to="/service/google-ads">
+                         Windshield Protection Film
+                        </NavLink>
+                      </li>
+                       <li className="dropdown-link">
+                        <NavLink onClick={openMenu} to="/service/google-ads">
+                       Headlight Protection Film
+                        </NavLink>
+                      </li>
                       <div className="arrow"></div>
                     </ul>
                   </div>
@@ -106,9 +116,11 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/logo-desgin">Surface Protection Film (PPF)</NavLink>
+                        <NavLink onClick={openMenu} to="/service/logo-desgin">UV Protection Film</NavLink>
                       </li>
-                     
+                     <li className="dropdown-link">
+                        <NavLink onClick={openMenu} to="/service/logo-desgin">Heat Reduction Film</NavLink>
+                      </li>
                       <div className="arrow"></div>
                     </ul>
                   </div>
