@@ -5,7 +5,7 @@ const SingleServiceLeft = () => {
   return (
     <div className="col-50">
       {/* Get Service Box */}
-      <div data-aos="fade-left"
+      <div data-aos="zoom-in-up"
      className="ct-fancy-box ct-fancy-box-layout1">
         <div className="item--inner">
           <div className="item--meta">
@@ -24,7 +24,7 @@ const SingleServiceLeft = () => {
       </div>
 
       {/* Contact Info: Phone */}
-      <div data-aos="fade-left"
+      <div data-aos="zoom-in-up"
      className="ct-contact-info">
         <div className="ct-contact-content">
           <label className="ct-contact-title">Contact Us</label>
@@ -47,7 +47,7 @@ const SingleServiceLeft = () => {
       </div>
 
       {/* Contact Info: Address */}
-      <div data-aos="fade-left"
+      <div data-aos="zoom-in-up"
       className="ct-contact-info">
         <div className="ct-contact-content">
           <label className="ct-contact-title">Address</label>
@@ -68,7 +68,7 @@ const SingleServiceLeft = () => {
       </div>
 
       {/* Always open section */}
-      <div data-aos="fade-left"
+      <div data-aos="zoom-in-up"
       className="ct-contact-info">
         <div className="ct-contact-content">
           <label className="ct-contact-title">Open For Consultation 24/7</label>
@@ -80,7 +80,7 @@ const SingleServiceLeft = () => {
 
 
       {/* Open Hours Box */}
-      <div data-aos="fade-left"
+      <div data-aos="zoom-in-up"
      className="ct-fancy-box ct-fancy-box-layout2">
         <div className="item--inner">
           <div className="item--meta">

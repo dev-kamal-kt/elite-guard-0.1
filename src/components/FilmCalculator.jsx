@@ -196,7 +196,7 @@ const FilmCalculator = () => {
                             borderRadius: "50%",
                           }}
                           onError={(e) =>
-                            (e.target.src = "https://via.placeholder.com/28")
+                            (e.target.src = "")
                           }
                         />
                       </span>
