@@ -83,7 +83,7 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/google-ads">
+                        <NavLink onClick={openMenu} to="/services/Paint Protection Film">
                           Paint Protection Film
                         </NavLink>
                       </li>
@@ -308,20 +308,3 @@ const Header = () => {
 
 export default Header;
 
-/*
-Services
-Automotive Services
-__Car Window Tinting
-__Paint Protection Film (PPF)
-Residential Services
-__Home Window Tinting
-__Privacy Window Film
-__Kitchen Window Film
-__Surface Protection Film (Surface PPF)
-Commercial Services
-__Office Window Tinting
-__Building Glass Film
-__Security Window Film
-__Surface Protection Film
-
-*/
