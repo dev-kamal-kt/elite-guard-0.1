@@ -7,7 +7,8 @@ const ServiceTemp = () => {
   const { serviceName } = useParams();
 
   const formatString = (str) => {
-    return str.split(" ").join("_"); // e.g. "Paint Protection Film" → "Paint_Protection_Film"
+    // If serviceName is "Car Window Tinting", this returns "Car_Window_Tinting"
+    return str ? str.split(" ").join("_") : ""; 
   };
 
   useEffect(() => {
@@ -16,16 +17,13 @@ const ServiceTemp = () => {
     }
   }, [serviceName]);
 
-  // Find the service object that matches the key_name
-  const currentServiceObj = services.find(
-    (serviceObj) => Object.keys(serviceObj)[0] === key_name
-  );
+  // Logic: Since your data is an array where index 0 contains the keys, 
+  // we check if the requested key_name exists in that first object.
+  const serviceSections = services[0] ? services[0][key_name] : null;
 
-  if (!currentServiceObj) {
+  if (!serviceSections) {
     return <p>Service not found.</p>;
   }
-
-  const serviceSections = services[0][key_name];
 
   return (
     <div className="col-50">

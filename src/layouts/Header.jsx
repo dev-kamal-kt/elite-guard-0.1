@@ -88,12 +88,12 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/google-ads">
+                        <NavLink onClick={openMenu} to="/services/Windshield Protection Film">
                           Windshield Protection Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/google-ads">
+                        <NavLink onClick={openMenu} to="/services/Headlight Protection Film">
                           Headlight Protection Film
                         </NavLink>
                       </li>
@@ -120,23 +120,23 @@ const Header = () => {
                       <li className="dropdown-link">
                         <NavLink
                           onClick={openMenu}
-                          to="/service/video-production"
+                          to="/services/Privacy Window Film"
                         >
                           Privacy Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/copywriting">
+                        <NavLink onClick={openMenu} to="/services/Kitchen Window Film">
                           Kitchen Window Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/logo-desgin">
+                        <NavLink onClick={openMenu} to="/services/UV Protection Film">
                           UV Protection Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/logo-desgin">
+                        <NavLink onClick={openMenu} to="/services/Heat Reduction Film">
                           Heat Reduction Film
                         </NavLink>
                       </li>
@@ -153,32 +153,32 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/blog-writing">
+                        <NavLink onClick={openMenu} to="/services/Office Window Tinting">
                           Office Window Tinting
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/sound-canvas">
+                        <NavLink onClick={openMenu} to="/services/Building Glass Film">
                           Building Glass Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/product-description">
-                          Security Window Film
+                        <NavLink to="/services/Safety Security Film">
+                          Safety Security Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
                         <NavLink
                           onClick={openMenu}
-                          to="/service/content-strategy"
+                          to="/services/Anti Glare Film"
                         >
-                          Anti-Glare Film
+                          Anti Glare Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
                         <NavLink
                           onClick={openMenu}
-                          to="/service/content-strategy"
+                          to="/services/Decorative Frosted Film"
                         >
                           Decorative Frosted Film
                         </NavLink>
@@ -196,24 +196,24 @@ const Header = () => {
                   <div className="dropdown second">
                     <ul>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/blog-writing">
-                          Surface Paint Protection Film (PPF)
+                        <NavLink onClick={openMenu} to="/services/Surface Paint Protection Film">
+                          Surface Paint Protection Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink onClick={openMenu} to="/service/sound-canvas">
+                        <NavLink onClick={openMenu} to="/services/Kitchen Cabinet Protection Film">
                           Kitchen Cabinet Protection Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
-                        <NavLink to="/service/product-description">
+                        <NavLink to="/services/Marble Surface Protection Film">
                           Marble Surface Protection Film
                         </NavLink>
                       </li>
                       <li className="dropdown-link">
                         <NavLink
                           onClick={openMenu}
-                          to="/service/content-strategy"
+                          to="/services/Furniture Protection Film"
                         >
                           Furniture Protection Film
                         </NavLink>
@@ -221,7 +221,7 @@ const Header = () => {
                       <li className="dropdown-link">
                         <NavLink
                           onClick={openMenu}
-                          to="/service/content-strategy"
+                          to="/services/Elevator Panel Protection Film"
                         >
                           Elevator Panel Protection Film
                         </NavLink>
