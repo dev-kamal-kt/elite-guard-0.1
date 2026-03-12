@@ -6,7 +6,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
 import useContact from "../store/useContact";
 
-const ContactSection = () => {
+const QuickContact = () => {
   const msgRef = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -71,7 +71,6 @@ const ContactSection = () => {
     if (!validateForm()) {
       return;
     }
-
     const formData = {
       name: name.trim(),
       email: email.trim(),
@@ -80,24 +79,7 @@ const ContactSection = () => {
       message: message.trim(),
       submittedAt: new Date().toISOString(),
     };
-
-    /*
-    console.log("=== CONTACT FORM SUBMITTED ===");
-    console.log("Name    :", formData.name);
-    console.log("Email   :", formData.email);
-    console.log("Phone   :", formData.phone);
-    console.log("Message :", formData.message);
-    console.log("Time    :", formData.submittedAt);
-    console.log("==============================");
-    */
-
-    // Here you would normally send data to backend
-    // fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
-
     contactNow(JSON.stringify(formData));
-
-    //showMessage("Thank you! Your message has been sent.", true);
-
     // Reset form
     setName("");
     setEmail("");
@@ -106,52 +88,9 @@ const ContactSection = () => {
   };
 
   return (
-    <div id="contact-section" className="form-container">
-      <h2 className="section-title">Quick to contact us</h2>
-
+    <div style={{position : "relative",top : "8rem"}} id="contact-section" className="form-container">
       <div className="contact-grid">
         <div className="contact-left">
-          <div className="contact-method">
-            <div className="method-icon">
-              <MdAddIcCall color="#165f02" size={25} />
-            </div>
-            <div className="method-content">
-              <h3>Call or WhatsApp</h3>
-              <p>
-                <a href="tel:+971564911220">+971564911220</a>
-              </p>
-            </div>
-          </div>
-
-          <div className="contact-method">
-            <div className="method-icon">
-              <MdOutlineEmail color="#165f02" size={25} />
-            </div>
-            <div className="method-content">
-              <h3>Email</h3>
-              <p>
-                <a href="mailto:eliteguardcarcare@gmail.com">
-                  eliteguardcarcare@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="contact-method">
-            <div className="method-icon">
-              <IoLocationOutline color="#165f02" size={27} />
-            </div>
-            <div className="method-content">
-              <h3>Mobile Service Areas</h3>
-              <p>
-                DIP 2, Dubai - Street 30 - Dubai Investment Park Second - Dubai
-                <br />
-                We come to your door
-              </p>
-            </div>
-          </div>
-
-          <hr style={{ border: "none", margin: "36px 0" }} />
 
           <h2 style={{ fontSize: "1.55rem", marginBottom: "24px" }}>
             Send us a message
@@ -262,34 +201,9 @@ const ContactSection = () => {
             </div>
           </form>
         </div>
-
-        <div>
-          <div className="map-wrapper">
-            <iframe
-              src="https://www.google.com/maps/place/24%C2%B058'07.5%22N+55%C2%B011'31.5%22E/@24.9687415,55.1894963,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.9687415!4d55.1920712?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
-              width="100%"
-              height="100%"
-              style={{ border: "0" }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-
-          <a
-            href="https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for..."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whatsapp-big-btn"
-          >
-            <span style={{ fontSize: "1.5rem" }}>
-              <BsWhatsapp size={25} />
-            </span>{" "}
-            Chat on WhatsApp
-          </a>
-        </div>
       </div>
     </div>
   );
 };
 
-export default ContactSection;
+export default QuickContact;

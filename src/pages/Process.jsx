@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/process.css"
+import { LiaCertificateSolid } from "react-icons/lia";
 
 const Process = () => {
   return (<>
@@ -65,7 +66,9 @@ const Process = () => {
         </div>
         <div className="step-card">
           {/* <div className="step-number">6</div> */}
-          <div className="step-icon">🧼</div>
+          <div className="step-icon">
+            <LiaCertificateSolid size={80} color='#008c46'/>
+          </div>
           <h3 className="step-title">Warranty Activation</h3>
           <p className="step-description">
            We provide comprehensive warranty details, covering materials and workmanship, with easy claims process for peace of mind.

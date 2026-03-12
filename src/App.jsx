@@ -11,6 +11,7 @@ import Projects from "./pages/Projects";
 import Blogs from "./pages/Blogs";
 import SingleBlogView from "./components/SingleBlogView";
 import SingleService from "./components/SingleService";
+import QuickContact  from "./components/QuickContact";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="blogs" element={<Blogs />} />
           <Route path="blog-view" element={<SingleBlogView />} />
           <Route path="services/:serviceName" element={<SingleService />} />
+          <Route path="quick-contact" element={<QuickContact />} />
         </Route>
       </Routes>
     </Router>

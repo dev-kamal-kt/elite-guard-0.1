@@ -148,9 +148,6 @@ nav {
   text-transform: uppercase;
   font-size: 1rem;
 }
-ul .active {
-  border: none;
-}
 .nav-links li .active-nav {
    border-bottom: 2px solid #ffffff;
 }
@@ -315,11 +312,11 @@ box-shadow: 0 0 25px r#f8a813, 0 0 35px #f8a813;
       transform 0.3s ease;
   }
   
-  /* .nav-links.active {
+  .nav-links.active {
     display: flex;
     opacity: 1;
     transform: translateY(0);
-  } */
+  } 
   .nav-links li {
     text-align: center;
     margin: 0;

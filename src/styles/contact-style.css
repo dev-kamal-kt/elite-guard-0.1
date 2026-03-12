@@ -98,7 +98,13 @@ form {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-
+#contactForm {
+  margin-top: 0;
+  padding: 0 .6rem;
+}
+select {
+  font-family: poppins;
+}
 form > * {
   grid-column: span 2;
 }
@@ -118,7 +124,7 @@ form > select {
 input,
 textarea {
   width: 100%;
-  padding: 15px 18px;
+  padding: 10px 18px;
   border: 1px solid #d1d5db;
   border-radius: 10px;
   font-size: 1rem;
@@ -134,7 +140,7 @@ textarea:focus {
 }
 
 textarea {
-  min-height: 150px;
+  min-height: 110px;
   resize: vertical;
 }
 
@@ -201,11 +207,6 @@ textarea {
 }
 
 @media (max-width: 640px) {
-  /* .container { padding: 0 16px; }
-
-      .contact-hero-title { font-size: 2.3rem; }
-      .hero-subtitle { font-size: 1.05rem; } */
-
   .contact-left,
   .contact-right {
     padding: 28px 10px;
@@ -213,13 +214,24 @@ textarea {
 
   form {
     grid-template-columns: 1fr;
+
   }
   #contactForm {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
-
+  #contactForm {
+    padding: 0;
+  }
+#contactForm select {
+    outline: none;
+    border: 1px solid #767676;
+    padding: .5rem .8rem;
+  }
+  #contactForm textarea {
+    height: 70px;
+  }
   .submit-btn {
     max-width: none;
     padding: 16px;

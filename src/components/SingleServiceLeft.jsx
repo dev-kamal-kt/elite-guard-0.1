@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const SingleServiceLeft = () => {
   return (
@@ -14,9 +15,9 @@ const SingleServiceLeft = () => {
               to make your visit informative and hassle free.
             </div>
             <div className="item--link">
-              <a className="btn btn-style2" href="#contact-form">
+              <NavLink className="btn btn-style2" to="/contact-us#quick-contact">
                 Get Service
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -65,6 +66,18 @@ const SingleServiceLeft = () => {
           </div>
         </div>
       </div>
+
+      {/* Always open section */}
+      <div data-aos="fade-left"
+      className="ct-contact-info">
+        <div className="ct-contact-content">
+          <label className="ct-contact-title">Open For Consultation 24/7</label>
+          <div className="ct-contact-list">
+          
+          </div>
+        </div>
+      </div>
+
 
       {/* Open Hours Box */}
       <div data-aos="fade-left"

@@ -76,7 +76,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-section {
-    height: 80vh;
+    height: 50vh;
   }
   .slide-content {
     width: 100%;
@@ -103,6 +103,6 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 80vh;
+    height: 50vh;
   }
 }
