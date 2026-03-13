@@ -72,7 +72,7 @@ const FilmCalculator = () => {
       id: "7",
       companyPrice: "350.00",
       offerPrice: "175.00",
-      name: "Not Sure?",
+      name: "Not Sure",
       type: "We will help you choose",
       description:
         "Unsure which film is right for you?\nWe will bring samples to your location\nFree professional consultation\nExact measurements on site\nCustomized quotation",
@@ -187,7 +187,7 @@ const FilmCalculator = () => {
                       />
                       <span className="circle">
                         <img
-                          src={`/window-films/${film.name.toLowerCase().replace("?", "unknown")}.png`}
+                          src={`/window-films/${film.name.toLowerCase()}.png`}
                           alt={film.name}
                           style={{
                             width: "28px",

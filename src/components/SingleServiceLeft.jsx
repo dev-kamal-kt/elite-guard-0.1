@@ -15,7 +15,7 @@ const SingleServiceLeft = () => {
               to make your visit informative and hassle free.
             </div>
             <div className="item--link">
-              <NavLink className="btn btn-style2" to="/contact-us#quick-contact">
+              <NavLink className="btn btn-style2" to="/quick-contact">
                 Get Service
               </NavLink>
             </div>

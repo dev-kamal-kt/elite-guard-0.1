@@ -265,14 +265,15 @@ const ContactSection = () => {
 
         <div>
           <div className="map-wrapper">
-            <iframe
-              src="https://www.google.com/maps/place/24%C2%B058'07.5%22N+55%C2%B011'31.5%22E/@24.9687415,55.1894963,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.9687415!4d55.1920712?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
-              width="100%"
-              height="100%"
-              style={{ border: "0" }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
+            <iframe 
+  width="100%" 
+  height="450" 
+  style={{ border: 0, borderRadius: '8px' }} 
+  loading="lazy" 
+  allowFullScreen 
+  referrerPolicy="no-referrer-when-downgrade" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.284758253108!2d55.18821137537416!3d24.97349997785532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f733e2b23bb77%3A0x91e2ead6b52a1f1b!2sStreet%2030%20-%20Dubai%20Investment%20Park%202%20-%20Dubai!5e0!3m2!1sen!2sae!4v1710334800000!5m2!1sen!2sae">
+</iframe>
           </div>
 
           <a

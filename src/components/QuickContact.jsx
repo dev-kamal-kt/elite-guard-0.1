@@ -201,6 +201,20 @@ const QuickContact = () => {
             </div>
           </form>
         </div>
+        <div className="gallary">
+        <div className="gallary-card">
+          <img src="/quick-contact-image/0.jpeg" alt="Car window tinting project in Dubai - before and after view of luxury SUV with privacy film" className="project-image"/>
+        </div>
+        <div className="gallary-card">
+          <img src="/quick-contact-image/1.jpeg" alt="Car window tinting project in Dubai - before and after view of luxury SUV with privacy film" className="project-image"/>
+        </div>
+        <div className="gallary-card">
+          <img src="/quick-contact-image/2.jpeg" alt="Car window tinting project in Dubai - before and after view of luxury SUV with privacy film" className="project-image"/>
+        </div>
+        <div className="gallary-card">
+          <img src="/quick-contact-image/3.jpeg" alt="Car window tinting project in Dubai - before and after view of luxury SUV with privacy film" className="project-image"/>
+        </div>
+        </div>
       </div>
     </div>
   );

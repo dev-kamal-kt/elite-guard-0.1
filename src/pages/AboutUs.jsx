@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="hero">
+      <section style={{height : "100vh"}} id="hero">
         <div className="container">
           <div className="hero-eyebrow">WHO WE ARE</div>
           <h1 className="hero-title">Crafting Excellence Since 2018</h1>
@@ -96,7 +96,7 @@ const AboutUs = () => {
         }}
       >
         <div className="container">
-          <h2 style={{ fontSize: '2.6rem', marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '2rem', marginBottom: '20px' }}>
             Ready to Experience the Elite Difference?
           </h2>
           <p
@@ -105,21 +105,22 @@ const AboutUs = () => {
               maxWidth: '680px',
               margin: '0 auto 40px',
               opacity: 0.95,
+              color : "#444343"
             }}
           >
             Join hundreds of Dubai and Abu Dhabi vehicle owners who trust us with their most prized possessions.
           </p>
           <a
-            href="/contact"
+            href="/quick-contact"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '12px',
-              background: 'white',
-              color: 'var(--primary)',
+              gap: '8px',
+              background: '#016a97',
+              color: '#fff',
               fontWeight: 700,
-              fontSize: '1.15rem',
-              padding: '18px 48px',
+              fontSize: '16px',
+              padding: '.5rem .8rem',
               borderRadius: '999px',
               textDecoration: 'none',
               boxShadow: '0 10px 30px rgba(0,0,0,0.25)',

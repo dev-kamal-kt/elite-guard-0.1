@@ -14,8 +14,8 @@ const Footer = () => {
         <h3 className="footer-title">Contact Us</h3>
         <ul className="footer-contact-list">
           <li>
-            <NavLink to="tel:+971563990282" className="footer-link">
-              <span className="icon"><MdAddIcCall size={25}/></span> +971563990282
+            <NavLink to="tel:+971564911220" className="footer-link">
+              <span className="icon"><MdAddIcCall size={25}/></span> +971564911220
             </NavLink>
           </li>
           <li>
@@ -29,10 +29,10 @@ const Footer = () => {
       <div className="footer-column">
         <h3 className="footer-title">Our Services</h3>
         <ul className="footer-list">
-          <li><NavLink to="/services#window-tinting" className="footer-link">Window Tinting</NavLink></li>
-          <li><NavLink to="/services#car-wrapping" className="footer-link">Car Wrapping</NavLink></li>
-          <li><NavLink to="/services#car-detailing" className="footer-link">Car Detailing</NavLink></li>
-          <li><NavLink to="/services#protection-films" className="footer-link">Protection Films</NavLink></li>
+          <li><NavLink to="/services/Car Window Tinting" className="footer-link">Automotive Protection</NavLink></li>
+          <li><NavLink to="/services/Home Window Tinting" className="footer-link">Residential Window Film</NavLink></li>
+          <li><NavLink to="/services/Office Window Tinting" className="footer-link">Commercial Window Film</NavLink></li>
+          <li><NavLink to="/services/Surface Paint Protection Film" className="footer-link">Surface Protection</NavLink></li>
         </ul>
       </div>
       <div className="footer-column">
@@ -47,8 +47,8 @@ const Footer = () => {
     </div>
     <div className="footer-bottom">
       <p className="copyright">
-        © 2026 Elite Guard Car Care. All rights reserved.<br/>
-        Proudly serving Dubai & Abu Dhabi, UAE.
+        © 2026 Elite Guard Auto Accessories Fittings LLC. All rights reserved.<br/>
+        Proudly serving DIP 2, Dubai - Street 30 - Dubai Investment Park Second - Dubai
       </p>
     </div>
   </div>

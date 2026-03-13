@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/service-section.css";
+import { NavLink } from "react-router-dom";
 
 const ServiceSection = () => {
   return (
@@ -22,9 +23,9 @@ const ServiceSection = () => {
               <li>Professional Work with 14yrs + Experience</li>
               <li>We Come to Your Doorstep – Hassle-Free Mobile Service</li>
             </ul>
-            <a href="#quote" className="book-btn">
+            <NavLink to="/quick-contact" className="book-btn">
               Book Now <span className="heartbeat">♥</span>
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className="service-card">
@@ -55,7 +56,7 @@ const ServiceSection = () => {
             className="card-image"
             style={{
               backgroundImage:
-                "url('/service-imgs/gold-reflective.jpeg')",
+                "url('/service-imgs/gold-reflective.png')",
             }}
           ></div>
           <div className="card-body">
@@ -70,9 +71,9 @@ const ServiceSection = () => {
               <li>GS Mirror Tint – Glare Gone, Heat Rejected</li>
             </ul>
 
-            <a href="#quote" className="book-btn">
+            <NavLink to="/quick-contact" className="book-btn">
               Book Now <span className="heartbeat">♥</span>
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className="service-card">
@@ -94,9 +95,9 @@ const ServiceSection = () => {
               <li>Premium Look with High-End Film Quality</li>
               <li>VIP Doorstep Service – Discreet & Fast</li>
             </ul>
-            <a href="#quote" className="book-btn">
+            <NavLink to="/quick-contact" className="book-btn">
               Book Now <span className="heartbeat">♥</span>
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className="service-card">
@@ -118,9 +119,9 @@ const ServiceSection = () => {
               <li>Instant Comfort Even After Parking in Sun</li>
               <li>Superior Solar Control for UAE Summers</li>
             </ul>
-            <a href="#quote" className="book-btn">
+            <NavLink to="/quick-contact" className="book-btn">
               Book Now <span className="heartbeat">♥</span>
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className="service-card">
@@ -142,9 +143,9 @@ const ServiceSection = () => {
               <li>Keeps Valuables Hidden from View</li>
               <li>Secure & Stylish Appearance Upgrade</li>
             </ul>
-            <a href="#quote" className="book-btn">
+            <NavLink to="/quick-contact" className="book-btn">
               Book Now <span className="heartbeat">♥</span>
-            </a>
+            </NavLink>
           </div>
         </div>
       </section>
