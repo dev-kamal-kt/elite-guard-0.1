@@ -15,7 +15,6 @@ const Header = () => {
   };
   const getQote = () => {
     qtrRef.current.click();
-    //navigate("https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for%20window%20tinting...")
   };
 
   useEffect(() => {
@@ -34,7 +33,6 @@ const Header = () => {
 
   useEffect(() => {
     setPath(location.pathname);
-    console.log(path);
   }, [location]);
 
   return (

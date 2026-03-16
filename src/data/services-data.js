@@ -7,7 +7,7 @@ const services = [
         description:
           "Elite Guard provides high-performance car window tinting across Dubai and Abu Dhabi. Using ISO & SGS certified films (including original 3M options), our experts deliver dust-free, bubble-free installation at your doorstep. With over 14 years of experience, we ensure your car stays cooler, safer, and more stylish under the UAE sun.",
         image:
-          "https://everywheretinting.ae/wp-content/uploads/2025/03/everywhere__0002_male-auto-wrapper-with-blade-car-tinting-film-2024-11-27-04-53-10-utc-e1742673855268-762x390.jpg",
+          "/service-imgs/car-tinting.jpeg",
       },
       {
         section: "benefits",
@@ -439,7 +439,7 @@ Heat_Reduction_Film : [
     title: "Heat Reduction Film | Elite Guard UAE",
     description:
       "Elite Guard delivers high-performance Heat Reduction Film solutions across Dubai and Abu Dhabi. Our advanced films block excessive solar heat, reduce glare, and protect interiors from UV damage. With professional installation and durable materials, Heat Reduction Film ensures your home, office, or vehicle stays cooler, more energy-efficient, and comfortable under the UAE’s intense climate.",
-    image: "/service-imgs/heat-reduction-film.png",
+    image: "/service-imgs/heat-reduction-film.jpeg",
   },
   {
     section: "benefits",

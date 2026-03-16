@@ -14,7 +14,7 @@
     top: 1rem;
     width: 14rem;
     position: relative;
-    background: #000;
+    background: #ffffff;
 }
 
 .dropdown-link > a {
@@ -127,11 +127,11 @@
     .dropdown.second {
         left: 0 !important;
         padding-left: 1.5rem !important; /* Indents Automotive/Residential sub-items */
-        background: #111; /* Darker background for depth */
+        background: #ffffff; /* Darker background for depth */
     }
 
     .dropdown ul {
-        background: #000;
+        background: #ffffff;
         width: 100% !important;
         position: relative !important;
         top: 0 !important;

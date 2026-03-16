@@ -265,17 +265,16 @@ const ContactSection = () => {
 
         <div>
           <div className="map-wrapper">
-            <iframe 
-  width="100%" 
-  height="450" 
-  style={{ border: 0, borderRadius: '8px' }} 
-  loading="lazy" 
-  allowFullScreen 
-  referrerPolicy="no-referrer-when-downgrade" 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.284758253108!2d55.18821137537416!3d24.97349997785532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f733e2b23bb77%3A0x91e2ead6b52a1f1b!2sStreet%2030%20-%20Dubai%20Investment%20Park%202%20-%20Dubai!5e0!3m2!1sen!2sae!4v1710334800000!5m2!1sen!2sae">
-</iframe>
+            <iframe
+              width="100%"
+              height="450"
+              style={{ border: 0, borderRadius: "8px" }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.284758253108!2d55.18821137537416!3d24.97349997785532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f733e2b23bb77%3A0x91e2ead6b52a1f1b!2sStreet%2030%20-%20Dubai%20Investment%20Park%202%20-%20Dubai!5e0!3m2!1sen!2sae!4v1710334800000!5m2!1sen!2sae"
+            ></iframe>
           </div>
-
           <a
             href="https://wa.me/971564911220?text=Hello%20Elite%20Guard%20Team%2C%20I%27d%20like%20a%20quote%20for..."
             target="_blank"
@@ -283,8 +282,8 @@ const ContactSection = () => {
             className="whatsapp-big-btn"
           >
             <span style={{ fontSize: "1.5rem" }}>
-              <BsWhatsapp size={25} />
-            </span>{" "}
+              <BsWhatsapp size={25} style={{marginTop : ".5rem"}} />
+            </span>
             Chat on WhatsApp
           </a>
         </div>

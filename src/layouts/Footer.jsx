@@ -4,6 +4,9 @@ import { MdAddIcCall } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
+import { IoLogoFacebook } from "react-icons/io5";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -22,6 +25,18 @@ const Footer = () => {
             <NavLink to="mailto:eliteguardcarcare@gmail.com" className="footer-link">
               <span className="icon"><MdOutlineEmail size={25}/></span> eliteguardcarcare@gmail.com
             </NavLink>
+          </li>
+          <li className='social-links'>
+             <NavLink to="#">
+                <IoLogoFacebook size={25}/>
+             </NavLink>
+             <NavLink to="#">
+                <FaSquareInstagram size={25}/>
+             </NavLink>
+             <NavLink to="#">
+                <FaLinkedin size={25}/>
+             </NavLink>
+
           </li>
         </ul>
       </div>
