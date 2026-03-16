@@ -11,14 +11,14 @@
 
     .slider-track {
       display: flex;
-      animation: slide 5s linear infinite;
+      animation: slide 15s linear infinite;
       will-change: transform;
     }
 
     .slidee {
       flex: 0 0 auto;
-      width: 180px;           /* width of each logo box */
-      height: 110px;
+      width: 130px;           /* width of each logo box */
+      height: 130px;
       margin: 20px 15px;
       /* background: rgba(255,255,255,0.06); */
       border-radius: 12px;
@@ -54,7 +54,7 @@
         transform: translateX(0);
       }
       to {
-        transform: translateX(-50%);
+        transform: translateX(-195%);
       }
     }
 
@@ -68,11 +68,11 @@
         width: 90%;
       }
       .slidee {
-        width: 160px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         margin: 15px 10px;
       }
       .slider-track {
-        animation-duration: 3s; /* faster on mobile */
+        animation-duration: 8s; /* faster on mobile */
       }
     }

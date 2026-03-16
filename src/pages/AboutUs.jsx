@@ -10,7 +10,7 @@ const AboutUs = () => {
           <div className="hero-eyebrow">WHO WE ARE</div>
           <h1 className="hero-title">Crafting Excellence Since 2018</h1>
           <p className="hero-subtitle">
-            Elite Guard Car Care is Dubai and Abu Dhabi’s trusted name for premium window tinting, car wrapping, PPF, ceramic coating and detailing — delivered with precision, passion and uncompromising quality.
+           Elite Guard is the UAE’s premier destination for advanced automotive and architectural protection. Specializing in high-performance Nano Care window tinting, Paint Protection Film (PPF), and precision surface care, we deliver world-class results directly to your doorstep across the Emirates.
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ const AboutUs = () => {
 
               <h3>Why Clients Choose Us</h3>
               <p>
-                We don’t just apply films or coatings — we engineer results. Every project begins with understanding your lifestyle, your vehicle, and your expectations. From there, we bring world-class materials (3M Crystalline, 3M 1080, XPEL, Ceramic Pro and more) together with obsessive craftsmanship.
+               We don’t just apply films or coatings—we engineer results. Every project begins with a deep understanding of your specific requirements, your environment, and your expectations. From there, we combine world-class materials—including premium Nano Care films and high-grade ceramic technologies—with obsessive craftsmanship. 
               </p>
 
               <h3>Our Promise</h3>
@@ -35,7 +35,7 @@ const AboutUs = () => {
                 <li>100% certified installation teams</li>
                 <li>Only genuine premium materials</li>
                 <li>Transparent pricing – no surprises</li>
-                <li>Door-to-door convenience across Dubai, Abu Dhabi & Al Ain</li>
+                <li>Door-to-door convenience across UAE</li>
                 <li>Lifetime / long-term warranties on most services</li>
                 <li>Customer satisfaction or we make it right — guaranteed</li>
               </ul>
@@ -63,7 +63,7 @@ const AboutUs = () => {
               <div className="value-icon">🛡️</div>
               <h3 className="value-title">Authenticity</h3>
               <p className="value-desc">
-                Only original 3M, XPEL, Ceramic Pro and other certified premium products — never cheap alternatives.
+                Only original Nano Care and certified premium products—never cheap alternatives. We use only high-performance materials to ensure the elite protection and finish your project deserves.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ const AboutUs = () => {
               color : "#444343"
             }}
           >
-            Join hundreds of Dubai and Abu Dhabi vehicle owners who trust us with their most prized possessions.
+            Join over 100,00 satisfied clients across the UAE who trust us to protect and enhance their most prized investments.
           </p>
           <a
             href="/quick-contact"

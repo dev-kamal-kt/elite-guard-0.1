@@ -6,15 +6,15 @@ const WhyUs = () => {
     <>
     <section id="why-hero">
         <div className="why-hero-content">
-            <h1>Why Choose Elite Guard Car Care</h1>
-            <p>Your trusted partner for premium automotive protection and styling in Dubai & Abu Dhabi, UAE.</p>
+            <h1>Why Choose Elite Guard </h1>
+            <p>Your trusted partner for premium automotive protection and styling in United Arab Emirates.</p>
             <a href="#why" className="btn">Discover More</a>
         </div>
     </section>
     <section id="why">
         <div id='whyyy' className="why-container">
             <h2>What Sets Us Apart</h2>
-            <p className="intro">At Elite Guard Car Care, we are committed to delivering exceptional quality, expertise, and customer satisfaction. Here's why discerning vehicle owners choose us for their automotive needs.</p>
+            <p className="intro">At Elite Guard , we are committed to delivering exceptional quality, expertise, and customer satisfaction. Here's why discerning vehicle owners choose us for their automotive needs.</p>
             
             <div className='certicate'>
                 <div className='c-col'>
@@ -45,8 +45,10 @@ const WhyUs = () => {
                 </div>
                 <div className="why-item">
                     <span className="why-icon">🔒</span>
-                    <h3>100% Original 3M Films</h3>
-                    <p>We use only authentic 3M films sourced directly from the manufacturer, avoiding counterfeits to deliver genuine quality and performance.</p>
+                    <h3>100% Original Nano Care Films</h3>
+                    <p>
+We use only authentic Nano Care films sourced directly from the manufacturer, avoiding counterfeits to deliver genuine quality and performance.
+                        </p>
                 </div>
                 <div className="why-item">
                     <span className="why-icon">🛡️</span>
@@ -60,13 +62,13 @@ const WhyUs = () => {
                 </div>
                 <div className="why-item">
                     <span className="why-icon">🚗</span>
-                    <h3>Doorstep Service</h3>
-                    <p>We offer convenient doorstep service across Dubai and Abu Dhabi, bringing our premium automotive care directly to you for ultimate convenience.</p>
+                    <h3>UAE-Wide Doorstep Service</h3>
+                    <p>We offer convenient doorstep service across the UAE, bringing our premium automotive care directly to you for ultimate convenience.</p>
                 </div>
                 <div className="why-item">
                     <span className="why-icon">⭐</span>
                     <h3>Customer Satisfaction Guarantee</h3>
-                    <p>We stand behind our work with a satisfaction guarantee, ensuring every client leaves with a smile and a vehicle that exceeds expectations.</p>
+                    <p>We stand behind our work with a 100% satisfaction guarantee, ensuring every client leaves with a smile and a finish that exceeds expectations.</p>
                 </div>
             </div>
         </div>

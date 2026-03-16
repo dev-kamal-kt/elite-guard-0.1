@@ -6,10 +6,9 @@ const ContactUs = () => {
     <>
     <section id="contact-hero">
     <div className="container">
-      <h1 className="contact-hero-title">Let's Talk About Your Car</h1>
+      <h1 className="contact-hero-title">Let’s Protect Your Investment</h1>
       <p className="hero-subtitle">
-        Questions about tinting, wrapping, PPF, ceramic coating or detailing?  
-        Message us — we usually reply within 30 minutes.
+       Questions about tinting, PPF, ceramic coating, or detailing? Message our specialists—we typically respond within 30 minutes to assist you.
       </p>
     </div>
   </section>

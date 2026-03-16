@@ -9,7 +9,7 @@ const Process = () => {
       <div className="hero-eyebrow">OUR METHOD</div>
       <h1 className="hero-title">Precision. Care. Perfection.</h1>
       <p className="hero-subtitle">
-        Every vehicle we touch receives the same meticulous attention — from first consultation to final hand-over.
+       Every project we undertake receives the same meticulous attention to detail—from the initial expert consultation to the final white-glove handover.
       </p>
     </div>
   </section>

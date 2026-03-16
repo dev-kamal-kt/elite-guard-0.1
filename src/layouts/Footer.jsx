@@ -6,7 +6,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -27,14 +28,14 @@ const Footer = () => {
             </NavLink>
           </li>
           <li className='social-links'>
-             <NavLink to="#">
+             <NavLink target='_blank' to="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbnItdU1TcEJGc01Hc2k5bzlzVjZOdVA4SXFRZ3xBQ3Jtc0trcXotMTZvU2R2TndDa0p1eFpCQzJzb1F3ZFZ3NWZwZ1ZZU0YyNjdTbFJqSVdlX1ppM3ZhTy1mbXRLbWxaTjBlcS1KNzE3WHQ4SzFaajZFTnNzTlhxYkhENml5cm5leVN3UjI0Nk90dnJoT3RqSFhTSQ&q=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61587138735648">
                 <IoLogoFacebook size={25}/>
              </NavLink>
-             <NavLink to="#">
+             <NavLink target='_blank' to="https://www.instagram.com/eliteguardcar">
                 <FaSquareInstagram size={25}/>
              </NavLink>
-             <NavLink to="#">
-                <FaLinkedin size={25}/>
+             <NavLink target='_blank' to="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqa0xqYmxQOWlSRXNuMVNYWUFCWW5UZXMtUUo1QXxBQ3Jtc0ttNElPdXIwRkdnaXducWJBNjdaM05xV0tGR2txcGU1blc3STB2TmM2MTh6amJQTGJpdFhBakN3ZGdWOG1TTE5pWjg3Z0JQdWFDNjlnaU1QUVZhNHNHWFBNWXk1ZVRzVGJDUjd4Qnc1Sl9kU0V3LTNkZw&q=https%3A%2F%2Fx.com%2Fguard_elit36151">
+                <FaXTwitter size={25}/>
              </NavLink>
 
           </li>
