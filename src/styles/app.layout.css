@@ -98,6 +98,34 @@ ul {
     margin: 0 10px;
   }
 }
+.not-found {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+.not-found .not-found-area {
+    padding: .5rem;
+    margin: 1rem auto;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+.not-found-area h2 {
+  margin: .7rem auto;
+  color: #e60101;
+  font-weight: 800;
+}
+.not-found-area img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+}
 
 /* Navbar */
 header {
